@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PubTrivia — Binnenkort!</title>
   <meta name="description" content="PubTrivia — de 24/7 digitale pubquiz voor horeca in Nederland. Binnenkort beschikbaar!">
-  <link rel="icon" type="image/png" href="/pubtrivia-logo-white.png">
+  <link rel="icon" type="image/png" href="/favicon.png">
 
   <style>
     @font-face {
@@ -41,13 +41,6 @@
       width: 100%;
     }
 
-    .logo {
-      width: min(280px, 65vw);
-      height: auto;
-      margin-bottom: 1rem;
-      filter: drop-shadow(0 4px 20px rgba(0,0,0,0.15));
-    }
-
     .mascots {
       width: min(400px, 80vw);
       height: auto;
@@ -62,42 +55,10 @@
       text-shadow: 0 4px 15px rgba(0,0,0,0.15);
       line-height: 1.1;
       letter-spacing: 0.02em;
+      transition: opacity 0.4s ease;
     }
 
-    .lang-switcher {
-      position: fixed;
-      top: 1.25rem;
-      right: 1.25rem;
-      z-index: 10;
-    }
-
-    .lang-btn {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: none;
-      cursor: pointer;
-      overflow: hidden;
-      padding: 0;
-      background: transparent;
-      ring: 2px solid rgba(255,255,255,0.6);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-      outline: 3px solid rgba(255,255,255,0.6);
-      outline-offset: 0;
-      transition: outline-color 0.2s, transform 0.2s;
-    }
-
-    .lang-btn:hover {
-      outline-color: white;
-      transform: scale(1.1);
-    }
-
-    .lang-btn img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .headline.fade { opacity: 0; }
 
     .domain {
       color: rgba(255,255,255,0.7);
@@ -108,37 +69,25 @@
   </style>
 </head>
 <body>
-  <div class="lang-switcher">
-    <button class="lang-btn" id="langToggle" onclick="toggleLang()" title="Switch to English">
-      <img id="flagImg" src="/flags/nl.png" alt="Nederlands">
-    </button>
-  </div>
-
   <div class="container">
-    <img class="logo" src="/pubtrivia-logo-white.png" alt="PubTrivia">
-    <img class="mascots" src="/monster-duo.png" alt="PubTrivia mascots">
+    <img class="mascots" src="/monster-duo.png" alt="PubTrivia">
     <h1 class="headline" id="headline">Binnenkort!</h1>
     <p class="domain">pub-trivia.nl</p>
   </div>
 
   <script>
-    let lang = "nl";
+    const texts = ["Binnenkort!", "Coming Soon!"];
+    let i = 0;
+    const h = document.getElementById("headline");
 
-    function toggleLang() {
-      lang = lang === "nl" ? "en" : "nl";
-      document.getElementById("headline").textContent =
-        lang === "nl" ? "Binnenkort!" : "Coming Soon!";
-      document.getElementById("flagImg").src =
-        lang === "nl" ? "/flags/nl.png" : "/flags/gb.png";
-      document.getElementById("flagImg").alt =
-        lang === "nl" ? "Nederlands" : "English";
-      document.getElementById("langToggle").title =
-        lang === "nl" ? "Switch to English" : "Schakel naar Nederlands";
-      document.documentElement.lang = lang;
-      document.title = lang === "nl"
-        ? "PubTrivia \u2014 Binnenkort!"
-        : "PubTrivia \u2014 Coming Soon!";
-    }
+    setInterval(() => {
+      h.classList.add("fade");
+      setTimeout(() => {
+        i = 1 - i;
+        h.textContent = texts[i];
+        h.classList.remove("fade");
+      }, 400);
+    }, 2000);
   </script>
 </body>
 </html>
