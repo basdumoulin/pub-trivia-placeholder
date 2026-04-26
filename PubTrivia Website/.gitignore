@@ -1,0 +1,12 @@
+# Internal review canvas — not for production
+review.html
+original.html
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log

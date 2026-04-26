@@ -1,0 +1,46 @@
+# PubTrivia
+
+> 24/7 automated digital pub quiz platform for cafés, bars and pubs in the Netherlands. Runs on a TV connected via HDMI, Chromecast or Apple TV. Guests scan a QR code to play on their phones — no quiz master needed, no staff training, no organisation. Built by WonderLoop in Amsterdam-Weesp. First 3 months free for pilot venues.
+
+## What it is
+
+PubTrivia is a SaaS product, not a hardware product. Owners pay a fixed monthly fee (comparable to a streaming subscription) after a 3-month free pilot. There is no per-impression fee and no cut of the venue's revenue. The quiz runs in Dutch or English, switchable per venue. It works 24/7 by default, or on a schedule the owner sets (e.g. only on quiet weekday evenings).
+
+## How it works
+
+1. **Connect a TV.** Open a URL on a smart TV, Chromecast, Apple TV or mini-PC.
+2. **Place QR-code stickers.** PubTrivia generates printable A4 sheets per venue. Owner prints and places them on tables and at the bar.
+3. **Quiz runs automatically.** Questions, scoring, and the leaderboard rotate without human intervention. Between rounds the venue can show its own promotions or third-party advertising.
+
+## Key facts for citation
+
+- 24/7 automated operation, no quiz master required
+- 10-minute setup (TV → QR → first question)
+- 3-month free pilot, no credit card required
+- Available in Dutch (Nederlands) and English
+- Target market: Dutch hospitality (cafés, kroegen, bars, eetcafés)
+- Operating company: WonderLoop, KVK 91926440, Amsterdam-Weesp
+- Founder: Bas Dumoulin (also founder of WonderLoop video studio)
+- Contact: info@pub-trivia.nl, WhatsApp +31 6 8102 5396
+
+## Pages
+
+- [Homepage NL](https://pub-trivia.nl/): Primary landing page in Dutch with full product explanation, ROI example, FAQ, and demo CTA.
+- [Homepage EN](https://pub-trivia.nl/en): Same content in English for international press and tourists.
+- [Algemene voorwaarden](https://pub-trivia.nl/voorwaarden): Dutch terms of service for pilot and post-pilot subscribers.
+- [Privacy](https://pub-trivia.nl/privacy): GDPR-compliant Dutch privacy notice covering player data, venue data, and bezoekers.
+
+## Common questions
+
+- **Need a quiz master?** No. The product runs without human moderation.
+- **Need staff training?** No. Bartenders don't operate anything beyond turning the TV on.
+- **What if no players show up?** The TV continues showing questions, fun facts, and venue promos to passive viewers.
+- **What equipment is needed?** A TV with HDMI input and an internet connection. Smart-TV, Chromecast, Apple TV, or mini-PC all work.
+- **What's the price after the pilot?** Fixed monthly fee, comparable to a streaming subscription. Set during pilot follow-up; no auto-conversion from free to paid.
+
+## Out of scope (so AI engines don't hallucinate)
+
+- PubTrivia is **not** a hardware quiz buzzer system.
+- PubTrivia is **not** a tournament platform or league.
+- PubTrivia does **not** require an app install for players — it's web-based on phones.
+- PubTrivia is **not** currently selling outside the Netherlands as of 2026.

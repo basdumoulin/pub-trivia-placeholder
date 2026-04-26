@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PubTrivia — 24/7 pubquiz die je rustige avonden vult</title>
+  <meta name="description" content="PubTrivia draait 24/7 op je TV. Gasten doen mee op hun telefoon, blijven langer aan tafel, en bestellen meer. Gratis pilot van 3 maanden.">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:title" content="PubTrivia — 24/7 pubquiz die je rustige avonden vult">
+  <meta property="og:description" content="Gasten blijven langer = meer rondes drinken. Gratis pilot van 3 maanden.">
+  <meta property="og:image" content="https://pub-trivia.nl/og-image.png">
+  <meta property="og:url" content="https://pub-trivia.nl">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1AD960">
+
+  <link rel="preload" href="/fonts/FatFrank-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "PubTrivia",
+    "description": "24/7 automated digital pub quiz platform for Dutch cafés and bars.",
+    "url": "https://pub-trivia.nl",
+    "email": "info@pub-trivia.nl",
+    "telephone": "+31681025396",
+    "image": "https://pub-trivia.nl/pubtrivia-logo-white.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Staalmeesterspad 14",
+      "postalCode": "1383 CD",
+      "addressLocality": "Amsterdam-Weesp",
+      "addressCountry": "NL"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "WonderLoop",
+      "vatID": "NL004925659B82",
+      "taxID": "91926440"
+    }
+  }
+  </script>
+
+  <style>
+    @font-face {
+      font-family: 'Fat Frank';
+      src: url('/fonts/FatFrank-Regular.woff2') format('woff2'),
+           url('/fonts/FatFrank-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --green: #1AD960;
+      --green-dark: #1a5c2a;
+      --orange: #FF6600;
+      --orange-dark: #E65C00;
+      --blue: #3CA6FF;
+      --cream: #FFFAF0;
+      --ink: #0a0a0a;
+      --shadow: 8px 8px 0 var(--ink);
+      --shadow-sm: 4px 4px 0 var(--ink);
+      --border: 3px solid var(--ink);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .display { font-family: 'Fat Frank', system-ui, sans-serif; line-height: 1.05; letter-spacing: 0.01em; font-weight: normal; }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; }
+
+    /* Reusable wrapper */
+    .wrap { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      background: var(--green);
+      padding: 3.5rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      gap: 1.5rem 2rem;
+      align-items: center;
+    }
+    @media (min-width: 900px) {
+      .hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 1rem 3rem; }
+      .hero { padding: 5rem 0 6rem; }
+    }
+    .hero-logo {
+      width: 180px;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      color: white;
+      font-size: clamp(2.6rem, 7vw, 5.5rem);
+      text-shadow: 0 4px 0 rgba(0,0,0,0.12);
+      margin-bottom: 1.25rem;
+    }
+    .hero p.lead {
+      color: rgba(255,255,255,0.95);
+      font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+      max-width: 36ch;
+      margin-bottom: 2rem;
+    }
+    .hero-mascot {
+      width: 100%;
+      max-width: 460px;
+      margin-left: auto;
+      filter: drop-shadow(0 8px 30px rgba(0,0,0,0.15));
+      animation: bob 4s ease-in-out infinite;
+    }
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Fat Frank', system-ui, sans-serif;
+      font-size: 1.4rem;
+      padding: 0.9rem 1.6rem;
+      border: var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      transition: transform 100ms ease-out, box-shadow 100ms ease-out;
+      background: white;
+      color: var(--ink);
+      cursor: pointer;
+    }
+    .btn:hover {
+      transform: rotate(-1.5deg) scale(1.03) translate(-2px, -2px);
+      box-shadow: 10px 10px 0 var(--ink);
+    }
+    .btn:active { transform: translate(2px, 2px); box-shadow: var(--shadow-sm); }
+    .btn-primary { background: white; }
+    .btn-orange { background: var(--orange); color: white; }
+    .btn-ghost {
+      background: transparent;
+      color: white;
+      border-color: white;
+      box-shadow: 8px 8px 0 rgba(0,0,0,0.2);
+    }
+    .btn-ghost:hover { box-shadow: 10px 10px 0 rgba(0,0,0,0.25); }
+
+    .text-link {
+      color: white;
+      font-size: 1rem;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      opacity: 0.95;
+    }
+
+    /* ---------- TRUST STRIP ---------- */
+    .trust {
+      background: white;
+      border-bottom: var(--border);
+      padding: 1.5rem 0;
+      overflow: hidden;
+    }
+    .trust-list {
+      display: flex;
+      gap: 0.75rem;
+      list-style: none;
+      overflow-x: auto;
+      padding-bottom: 0.25rem;
+      scrollbar-width: none;
+    }
+    .trust-list::-webkit-scrollbar { display: none; }
+    .trust-list li {
+      flex: 0 0 auto;
+      background: var(--cream);
+      border: var(--border);
+      border-radius: 999px;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      box-shadow: var(--shadow-sm);
+    }
+    @media (min-width: 900px) {
+      .trust-list { justify-content: center; flex-wrap: wrap; overflow: visible; }
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section.block { padding: 4rem 0; }
+    section.block h2 {
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      max-width: 22ch;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+    }
+    section.block .lead-sub {
+      text-align: center;
+      max-width: 50ch;
+      margin: -1.5rem auto 2.5rem;
+      color: rgba(0,0,0,0.7);
+      font-size: 1.1rem;
+    }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 700ms ease, transform 700ms ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .hero-mascot { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ---------- BENEFITS ---------- */
+    .benefits-grid {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 700px) { .benefits-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1000px) { .benefits-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .card {
+      background: white;
+      border: var(--border);
+      border-radius: 18px;
+      padding: 1.6rem 1.4rem;
+      box-shadow: var(--shadow);
+      transition: transform 180ms ease;
+    }
+    .card:hover { transform: rotate(-0.6deg) translate(-2px, -2px); }
+    .card .icon { font-size: 2.2rem; margin-bottom: 0.6rem; line-height: 1; }
+    .card h3 { font-size: 1.45rem; margin-bottom: 0.3rem; }
+    .card p { color: rgba(0,0,0,0.7); font-size: 0.98rem; }
+
+    /* ---------- STEPS ---------- */
+    .steps {
+      background: white;
+      border-top: var(--border);
+      border-bottom: var(--border);
+    }
+    .steps-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) { .steps-grid { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; } }
+
+    .step { text-align: center; }
+    .step .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 70px;
+      background: var(--orange);
+      color: white;
+      font-family: 'Fat Frank', sans-serif;
+      font-size: 2.6rem;
+      border: var(--border);
+      border-radius: 50%;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1rem;
+    }
+    .step:nth-child(2) .num { background: var(--blue); transform: rotate(-4deg); }
+    .step:nth-child(3) .num { background: var(--green); transform: rotate(3deg); }
+    .step h3 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+    .step .shot {
+      margin-top: 1.2rem;
+      border: var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      max-width: 240px;
+      margin-left: auto;
+      margin-right: auto;
+      background: var(--cream);
+    }
+    .step .shot.tv { max-width: 320px; }
+
+    /* ---------- IN ACTIE ---------- */
+    .in-actie {
+      background: var(--cream);
+    }
+    .in-actie-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      align-items: center;
+    }
+    @media (min-width: 800px) {
+      .in-actie-grid { grid-template-columns: 2fr 1fr; gap: 2rem; }
+    }
+    .tv-frame {
+      border: var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      background: black;
+    }
+    .phone-frame {
+      border: var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      background: white;
+      max-width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+      transform: rotate(2deg);
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq { background: white; border-top: var(--border); }
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+    details.faq-item {
+      background: var(--cream);
+      border: var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow-sm);
+      padding: 1.1rem 1.3rem;
+      cursor: pointer;
+    }
+    details.faq-item summary {
+      font-family: 'Fat Frank', sans-serif;
+      font-size: 1.3rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: '+';
+      font-size: 1.8rem;
+      line-height: 1;
+      transition: transform 200ms ease;
+    }
+    details.faq-item[open] summary::after { transform: rotate(45deg); }
+    details.faq-item p { margin-top: 0.7rem; color: rgba(0,0,0,0.78); font-size: 1.02rem; }
+
+    /* ---------- FINAL CTA ---------- */
+    .final-cta {
+      background: var(--orange);
+      color: white;
+      text-align: center;
+      padding: 5rem 0;
+      border-top: var(--border);
+    }
+    .final-cta h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 2rem; max-width: 18ch; margin-left: auto; margin-right: auto; }
+    .final-cta .cta-row { justify-content: center; }
+    .final-cta .form-pitch { margin-top: 2rem; max-width: 32ch; margin-left: auto; margin-right: auto; opacity: 0.95; }
+
+    /* ---------- LEAD FORM ---------- */
+    .lead-form {
+      max-width: 520px;
+      margin: 1.5rem auto 0;
+      background: white;
+      color: var(--ink);
+      border: var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      text-align: left;
+    }
+    .lead-form h3 { font-size: 1.4rem; margin-bottom: 0.4rem; }
+    .lead-form p.note { font-size: 0.9rem; color: rgba(0,0,0,0.6); margin-bottom: 1.1rem; }
+    .lead-form label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .lead-form input, .lead-form textarea {
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      border: 2px solid var(--ink);
+      border-radius: 10px;
+      font: inherit;
+      font-size: 1rem;
+      background: var(--cream);
+      margin-bottom: 0.85rem;
+    }
+    .lead-form textarea { resize: vertical; min-height: 80px; }
+    .lead-form button {
+      width: 100%;
+      padding: 0.9rem;
+      background: var(--green);
+      color: white;
+      font-family: 'Fat Frank', sans-serif;
+      font-size: 1.3rem;
+      border: var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: transform 100ms ease;
+    }
+    .lead-form button:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+    .lead-form .status { margin-top: 1rem; font-size: 0.95rem; }
+    .lead-form .status.ok { color: var(--green-dark); font-weight: 600; }
+    .lead-form .status.err { color: #c0392b; font-weight: 600; }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.85);
+      padding: 3rem 0 2rem;
+      font-size: 0.95rem;
+    }
+    footer .footer-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 700px) { footer .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; } }
+    footer h4 { font-family: 'Fat Frank', sans-serif; font-size: 1.3rem; color: white; margin-bottom: 0.7rem; }
+    footer a { color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px; }
+    footer a:hover { color: white; }
+    footer .legal-row {
+      margin-top: 2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============== HERO ============== -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <img class="hero-logo" src="/pubtrivia-logo-white.png" alt="PubTrivia" width="180" height="auto">
+        <h1>Maak van je rustige avonden je drukste avonden.</h1>
+        <p class="lead">PubTrivia draait 24/7 op je TV. Gasten doen mee op hun telefoon, blijven langer aan tafel, en bestellen meer. Jij hoeft niks te doen.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/31681025396?text=Hoi%20Bas%2C%20ik%20wil%20meer%20weten%20over%20PubTrivia%20voor%20mijn%20kroeg" target="_blank" rel="noopener">
+            <span aria-hidden="true">💬</span> Stuur ons een appje
+          </a>
+          <a class="text-link" href="#pilot-aanvragen">of vraag een gratis pilot aan ↓</a>
+        </div>
+      </div>
+      <div>
+        <picture>
+          <source srcset="/monster-duo.webp" type="image/webp">
+          <img class="hero-mascot" src="/monster-duo.png" alt="" width="460" height="auto">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TRUST STRIP ============== -->
+  <section class="trust" aria-label="Waarom je dit kunt vertrouwen">
+    <div class="wrap">
+      <ul class="trust-list">
+        <li>✅ 3 maanden gratis pilot</li>
+        <li>⏱ 10 min installatie</li>
+        <li>🙅 Geen quizmaster nodig</li>
+        <li>📺 Werkt op elke TV met internet</li>
+        <li>📍 Live demo in Weesp</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============== BENEFITS ============== -->
+  <section class="block" id="waarom">
+    <div class="wrap">
+      <h2 class="reveal">Waarom PubTrivia voor jouw kroeg?</h2>
+      <div class="benefits-grid">
+        <article class="card reveal">
+          <div class="icon">💰</div>
+          <h3>Meer omzet per gast</h3>
+          <p>Gasten blijven langer aan tafel = meer rondes drinken. Een extra rondje per tafel is zo binnen.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🕗</div>
+          <h3>Vult je rustige uren</h3>
+          <p>Dinsdag, woensdag, vroege avond. PubTrivia geeft een reden om langs te komen op je dode momenten.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🤖</div>
+          <h3>Geen werk voor jou</h3>
+          <p>Geen quizmaster, geen personeel, geen organisatie. TV aan, klaar.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">📺</div>
+          <h3>Jouw acties op het scherm</h3>
+          <p>Tussen de rondes door promoot je je eigen menu, gerechten of borrelhapjes. Jouw huisstijl.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">💸</div>
+          <h3>Verkoop reclametijd</h3>
+          <p>Verhuur reclametijd op je scherm aan lokale ondernemers. Extra inkomstenstroom voor je kroeg.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🔁</div>
+          <h3>24/7 actief</h3>
+          <p>Werkt dag en nacht, ook als jij vrij bent of op vakantie. Gasten kunnen altijd meedoen.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== STEPS ============== -->
+  <section class="block steps" id="hoe-werkt-het">
+    <div class="wrap">
+      <h2 class="reveal">Zo werkt het</h2>
+      <p class="lead-sub reveal">Drie stappen, nul gedoe. Je gasten kennen QR-codes al van het bestellen.</p>
+      <div class="steps-grid">
+        <div class="step reveal">
+          <div class="num">1</div>
+          <h3>Gast scant QR op de tafel</h3>
+          <p>Je krijgt printbare QR-stickers. Plakken en klaar.</p>
+          <div class="shot">
+            <img src="/screenshots/step1-join.webp" alt="Mobiele schermweergave van de PubTrivia join-flow" loading="lazy" width="600" height="auto">
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="num">2</div>
+          <h3>Speelt mee op z'n telefoon</h3>
+          <p>Vragen verschijnen synchroon op de TV en op het scherm van iedere speler.</p>
+          <div class="shot">
+            <img src="/screenshots/step2-question.webp" alt="Mobiele vraag in PubTrivia" loading="lazy" width="600" height="auto">
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="num">3</div>
+          <h3>Winnaars op het TV-scherm</h3>
+          <p>Live leaderboard, animaties, en tussen de rondes ruimte voor jouw promoties.</p>
+          <div class="shot tv">
+            <img src="/screenshots/tv-question.webp" alt="PubTrivia op een TV-scherm in een kroeg" loading="lazy" width="1200" height="auto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== IN ACTIE ============== -->
+  <section class="block in-actie" id="in-actie">
+    <div class="wrap">
+      <h2 class="reveal">PubTrivia in actie</h2>
+      <p class="lead-sub reveal">Zo ziet het eruit op een normale avond. TV op het scherm, gasten op hun telefoon.</p>
+      <div class="in-actie-grid">
+        <div class="reveal">
+          <div class="tv-frame">
+            <img src="/screenshots/tv-question.webp" alt="PubTrivia TV-scherm met vraag en timer" loading="lazy" width="1200" height="auto">
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="phone-frame">
+            <img src="/screenshots/mobile-answer.webp" alt="Speler-telefoon met antwoordweergave" loading="lazy" width="600" height="auto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FAQ ============== -->
+  <section class="block faq" id="faq">
+    <div class="wrap">
+      <h2 class="reveal">Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>Heb ik een quizmaster nodig?</summary>
+          <p>Nee. PubTrivia draait volledig automatisch. Vragen, antwoorden, scores, leaderboard, animaties — alles op de automatische piloot. Jij hoeft niks aan de microfoon te doen.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Moet mijn personeel iets doen?</summary>
+          <p>Nee. TV aan, klaar. Ze hoeven niets uit te leggen of bij te houden. Hooguit "ja, je kunt meedoen op je telefoon" als gasten ernaar vragen.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Kan ik dit eerst gratis testen?</summary>
+          <p>Ja. Eerste 3 maanden gratis pilot, geen creditcard, geen kleine lettertjes. Werkt het niet voor jouw kroeg, dan stoppen we gewoon.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Wat als niemand meespeelt?</summary>
+          <p>Niks aan de hand. De TV laat ook zonder spelers vragen, weetjes en sponsoren zien — gasten kijken het toch en raken erin betrokken. Vaak begint één tafel mee te doen, en dan volgt de rest.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Kan ik het ook alleen op rustige avonden gebruiken?</summary>
+          <p>Ja, je kiest zelf wanneer het draait. Aan-knop op rustige avonden, of gewoon 24/7 laten lopen. Helemaal aan jou.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Wat heb ik nodig om te starten?</summary>
+          <p>Een TV met internet (smart-TV, Chromecast, Apple TV of een goedkope mini-PC). Meer niet. We helpen je op afstand om het op te zetten.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FINAL CTA ============== -->
+  <section class="final-cta" id="pilot-aanvragen">
+    <div class="wrap">
+      <h2 class="reveal">Klaar om je dode uren te vullen?</h2>
+      <div class="cta-row reveal">
+        <a class="btn btn-ghost" href="https://wa.me/31681025396?text=Hoi%20Bas%2C%20ik%20wil%20meer%20weten%20over%20PubTrivia%20voor%20mijn%20kroeg" target="_blank" rel="noopener">
+          <span aria-hidden="true">💬</span> Stuur ons een appje
+        </a>
+      </div>
+      <p class="form-pitch">Liever per mail? Vraag hieronder een gratis pilot aan, dan bellen wij je terug.</p>
+
+      <form class="lead-form reveal" id="pilot-form" action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST">
+        <h3>Vraag een gratis pilot aan</h3>
+        <p class="note">Drie maanden gratis. Geen verplichtingen. We bellen je binnen 24 uur.</p>
+
+        <label for="naam">Jouw naam</label>
+        <input id="naam" name="naam" type="text" required autocomplete="name">
+
+        <label for="kroeg">Naam van je kroeg / café</label>
+        <input id="kroeg" name="kroeg" type="text" required>
+
+        <label for="plaats">Plaats</label>
+        <input id="plaats" name="plaats" type="text" required>
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+
+        <label for="telefoon">Telefoon (optioneel)</label>
+        <input id="telefoon" name="telefoon" type="tel" autocomplete="tel">
+
+        <label for="bericht">Korte vraag of bericht (optioneel)</label>
+        <textarea id="bericht" name="bericht" rows="3"></textarea>
+
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <button type="submit">Vraag de pilot aan →</button>
+        <div class="status" id="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>PubTrivia</h4>
+          <p>24/7 digitale pubquiz voor de Nederlandse horeca. Onderdeel van WonderLoop, Amsterdam-Weesp.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>
+            <a href="mailto:info@pub-trivia.nl">info@pub-trivia.nl</a><br>
+            <a href="https://wa.me/31681025396" target="_blank" rel="noopener">WhatsApp</a><br>
+            <a href="https://app.pub-trivia.nl" target="_blank" rel="noopener">Inloggen (klanten)</a>
+          </p>
+        </div>
+        <div>
+          <h4>Juridisch</h4>
+          <p>
+            <a href="/voorwaarden">Algemene voorwaarden</a><br>
+            <a href="/privacy">Privacyverklaring</a>
+          </p>
+        </div>
+      </div>
+      <div class="legal-row">
+        <span>© <span id="yr"></span> WonderLoop · KVK 91926440 · BTW NL004925659B82</span>
+        <span>Powered by <a href="https://wonderloop.nl" target="_blank" rel="noopener">WonderLoop</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Reveal-on-scroll
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        }
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    }
+
+    // Form handler (AJAX so we stay on-page)
+    const form = document.getElementById('pilot-form');
+    const status = document.getElementById('form-status');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        status.textContent = '';
+        status.className = 'status';
+        const data = new FormData(form);
+        try {
+          const r = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (r.ok) {
+            form.reset();
+            status.textContent = 'Bedankt — we bellen je binnen 24 uur terug.';
+            status.classList.add('ok');
+          } else {
+            const j = await r.json().catch(() => ({}));
+            status.textContent = j.error || 'Er ging iets mis. Stuur ons even een appje of mail naar info@pub-trivia.nl.';
+            status.classList.add('err');
+          }
+        } catch (err) {
+          status.textContent = 'Geen verbinding. Stuur ons een appje of mail naar info@pub-trivia.nl.';
+          status.classList.add('err');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

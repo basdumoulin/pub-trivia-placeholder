@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagina niet gevonden — PubTrivia</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#ff6a1f">
+  <link rel="preload" href="/assets/fonts/FatFrank-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles/shared.css">
+  <style>
+    @font-face {
+      font-family: 'Fat Frank';
+      src: url('/assets/fonts/FatFrank-Regular.woff2') format('woff2'),
+           url('/assets/fonts/FatFrank-Regular.woff') format('woff');
+      font-display: swap;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: #f6f1ea;
+      color: #1a1714;
+      line-height: 1.5;
+      min-height: 100dvh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    .mascot { width: min(280px, 60vw); margin-bottom: 24px; transform: rotate(-6deg); filter: drop-shadow(0 12px 24px rgba(26,23,20,0.15)); }
+    .code {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 13px; color: #4a4441;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-family: 'Fat Frank', system-ui, sans-serif;
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1; letter-spacing: -0.025em;
+      margin-bottom: 16px; font-weight: 400;
+    }
+    h1 em { color: #ff6a1f; }
+    p { color: #4a4441; max-width: 38ch; margin: 0 auto 28px; font-size: 17px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 22px; border-radius: 100px; border: none;
+      font-size: 15px; font-weight: 500;
+      background: #1a1714; color: #f6f1ea;
+      text-decoration: none;
+      transition: background 180ms ease;
+    }
+    .btn:hover { background: #ff6a1f; }
+    .btn-arrow {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: #f6f1ea; color: #1a1714;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 11px;
+    }
+    .alt-link { display: block; margin-top: 16px; font-size: 14px; color: #4a4441; }
+    .alt-link a { color: #1a1714; text-decoration: underline; text-underline-offset: 3px; }
+    .alt-link a:hover { color: #ff6a1f; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <img class="mascot" src="/assets/monster-duo.webp" alt="">
+  <div class="code">404 · pagina niet gevonden</div>
+  <h1>Hier <em>woont niemand</em>.</h1>
+  <p>De pagina die je zoekt bestaat niet (meer). Misschien een typefout? Loop terug naar de homepage.</p>
+  <a href="/" class="btn">Terug naar home <span class="btn-arrow">→</span></a>
+  <p class="alt-link">Page not found — <a href="/en/">go to the English homepage</a></p>
+</body>
+</html>

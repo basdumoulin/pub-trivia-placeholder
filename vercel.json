@@ -1,4 +1,6 @@
 {
   "buildCommand": "",
-  "outputDirectory": "public"
+  "outputDirectory": "PubTrivia Website",
+  "cleanUrls": true,
+  "trailingSlash": false
 }

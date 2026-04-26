@@ -1,0 +1,24 @@
+# Patterns are relative to project root (where vercel runs).
+# Vercel only reads .vercelignore from the project root, not from outputDirectory.
+
+# Internal review canvas — not for production
+PubTrivia Website/design-canvas.jsx
+PubTrivia Website/review.html
+PubTrivia Website/original.html
+
+# JSX source files — kept for reference, not used at runtime (page is now pure HTML)
+PubTrivia Website/directions/
+
+# Raw assets / drafts not referenced from the live site
+PubTrivia Website/uploads/
+
+# Old zip backup
+PubTrivia Website.zip
+
+# OS / editor cruft
+**/._*
+**/.DS_Store
+**/Thumbs.db
+**/.vscode/
+**/.idea/
+**/*.log

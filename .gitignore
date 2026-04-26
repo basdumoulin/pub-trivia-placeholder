@@ -1,2 +1,6 @@
 ._*
+.DS_Store
 .vercel
+
+# Source-zip backups (the deployable site is the unzipped folder)
+*.zip

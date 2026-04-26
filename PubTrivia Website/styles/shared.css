@@ -1,0 +1,21 @@
+/* Shared utilities — fonts, resets only. Each direction has its own scoped styles. */
+@font-face {
+  font-family: 'Fat Frank';
+  src: url('../assets/fonts/FatFrank-Regular.woff2') format('woff2'),
+       url('../assets/fonts/FatFrank-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.pt-root *,
+.pt-root *::before,
+.pt-root *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pt-root img { max-width: 100%; height: auto; display: block; }
+.pt-root a { color: inherit; text-decoration: none; }
+.pt-root button { font: inherit; cursor: pointer; }

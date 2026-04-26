@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PubTrivia — Eén rondje meer per gezelschap, elke avond</title>
+  <meta name="description" content="24/7 digitale pubquiz die op je TV draait. Geen quizmaster, geen gedoe — gewoon meer omzet op rustige avonden. Drie maanden gratis pilot.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="canonical" href="https://pub-trivia.nl/">
+  <link rel="alternate" hreflang="nl" href="https://pub-trivia.nl/">
+  <link rel="alternate" hreflang="en" href="https://pub-trivia.nl/en">
+  <link rel="alternate" hreflang="x-default" href="https://pub-trivia.nl/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PubTrivia">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:title" content="PubTrivia — Eén rondje meer per gezelschap, elke avond">
+  <meta name="geo.region" content="NL">
+  <meta name="geo.placename" content="Amsterdam-Weesp">
+  <meta property="og:description" content="24/7 digitale pubquiz die op je TV draait. Drie maanden gratis pilot.">
+  <meta property="og:url" content="https://pub-trivia.nl">
+  <meta property="og:image" content="https://pub-trivia.nl/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#ff6a1f">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="styles/shared.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://pub-trivia.nl/#wonderloop",
+        "name": "WonderLoop",
+        "legalName": "WonderLoop",
+        "url": "https://wonderloop.nl",
+        "email": "info@pub-trivia.nl",
+        "telephone": "+31681025396",
+        "taxID": "91926440",
+        "logo": "https://pub-trivia.nl/assets/pubtrivia-logo.png",
+        "sameAs": [
+          "https://wonderloop.nl",
+          "https://app.pub-trivia.nl"
+        ],
+        "founder": { "@id": "https://pub-trivia.nl/#bas" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Staalmeesterspad 14",
+          "postalCode": "1383 CD",
+          "addressLocality": "Amsterdam-Weesp",
+          "addressCountry": "NL"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "info@pub-trivia.nl",
+          "telephone": "+31681025396",
+          "areaServed": "NL",
+          "availableLanguage": ["Dutch", "English"]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://pub-trivia.nl/#bas",
+        "name": "Bas Dumoulin",
+        "givenName": "Bas",
+        "familyName": "Dumoulin",
+        "jobTitle": "Founder, PubTrivia",
+        "worksFor": { "@id": "https://pub-trivia.nl/#wonderloop" },
+        "url": "https://wonderloop.nl",
+        "nationality": "NL",
+        "knowsAbout": [
+          "Pub quiz software",
+          "Hospitality technology",
+          "Video direction",
+          "SaaS for cafés and bars"
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://pub-trivia.nl/#how-to-install",
+        "name": "Hoe je PubTrivia in je café installeert in 10 minuten",
+        "description": "PubTrivia opzetten in een Nederlands café duurt ongeveer 10 minuten en vereist alleen een TV met internet — geen quizmaster, geen training, geen apparaat aankopen.",
+        "inLanguage": "nl-NL",
+        "totalTime": "PT10M",
+        "tool": [
+          { "@type": "HowToTool", "name": "TV met HDMI-ingang, smart-TV, Chromecast of Apple TV" },
+          { "@type": "HowToTool", "name": "Werkende internetverbinding" },
+          { "@type": "HowToTool", "name": "A4-printer voor QR-stickers" }
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "TV koppelen",
+            "text": "Open de PubTrivia-link op een smart-TV, Chromecast of Apple TV. Wij helpen op afstand mee bij de eerste keer opzetten."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "QR-codes printen en plakken",
+            "text": "PubTrivia maakt QR-stickers voor jouw kroeg. Print ze zelf op A4 en plak ze op tafels, aan de bar en bij de wc."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "De quiz draait automatisch",
+            "text": "Vragen, scores en het leaderboard rollen volledig automatisch. 24/7 actief of alleen op rustige avonden — jij kiest het rooster."
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://pub-trivia.nl/#website",
+        "url": "https://pub-trivia.nl",
+        "name": "PubTrivia",
+        "description": "24/7 digitale pubquiz die op je TV draait. Geen quizmaster, geen gedoe.",
+        "publisher": { "@id": "https://pub-trivia.nl/#wonderloop" },
+        "inLanguage": "nl-NL"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://pub-trivia.nl/#service",
+        "name": "PubTrivia",
+        "alternateName": "PubTrivia voor café",
+        "description": "24/7 digitale pubquiz die op je TV draait. Geen quizmaster, geen gedoe — gewoon meer omzet op rustige avonden.",
+        "url": "https://pub-trivia.nl",
+        "image": "https://pub-trivia.nl/assets/pubtrivia-logo.png",
+        "provider": { "@id": "https://pub-trivia.nl/#wonderloop" },
+        "serviceType": "Digital pub quiz platform for hospitality venues",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Netherlands"
+        },
+        "audience": {
+          "@type": "BusinessAudience",
+          "name": "Café's, kroegen en eetcafés in Nederland"
+        },
+        "offers": {
+          "@type": "Offer",
+          "name": "Drie maanden gratis pilot",
+          "description": "Drie maanden gratis pilot voor pilotkroegen. Geen creditcard, geen verplichtingen.",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://pub-trivia.nl/#demo"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://pub-trivia.nl/#faq",
+        "inLanguage": "nl-NL",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Heb ik een quizmaster nodig?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nee. Vragen, antwoorden, scores en leaderboard draaien volledig automatisch. Jij hoeft niets aan de microfoon te doen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wat kost het na de pilot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Na drie maanden gratis kies je zelf of je doorgaat. Vaste maandprijs, vergelijkbaar met een streamingdienst — geen extra fee op je omzet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wat heb ik aan apparatuur nodig?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Een TV met HDMI-ingang en internet. Wij helpen je het opzetten."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wat als niemand meespeelt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "De TV laat ook zonder spelers vragen, weetjes en jouw aanbiedingen zien. Vaak begint één tafel — daarna volgt de rest."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan ik het ook alleen op rustige avonden gebruiken?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Je kiest zelf het rooster. Of laat het 24/7 lopen — beide werkt."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    html, body { margin: 0; padding: 0; background: #f0eee9; }
+    .pt-root { width: 100%; }
+
+    /* ========================================================
+       DIRECTION D — Layout B + Palette A
+       Editorial cream + ink + orange, on top of B's structure.
+       ======================================================== */
+    .pt-d {
+      --ink: #1a1714;
+      --ink-soft: #4a4441;
+      --paper: #f6f1ea;
+      --paper-2: #fff;
+      --paper-warm: #ede5d6;
+      --line: #d9cfbf;
+      --line-2: #c8bca6;
+      --accent: #ff6a1f;
+      --accent-deep: #d6520f;
+      --accent-soft: #ffe8d6;
+      --green: #1a8f4a;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      font-size: 16px;
+    }
+    .pt-d .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+    .pt-d .mono { font-family: 'JetBrains Mono', 'SF Mono', ui-monospace, monospace; }
+    .pt-d .serif { font-family: 'Fat Frank', system-ui, sans-serif; }
+
+    /* NAV — sticky */
+    .pt-d .nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(14px); background: rgba(246,241,234,0.78);
+      border-bottom: 1px solid var(--line);
+    }
+    .pt-d .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 4px 32px; max-width: 1200px; margin: 0 auto;
+    }
+    .pt-d .logo { display: flex; align-items: center; gap: 10px; font-family: 'Fat Frank', sans-serif; font-size: 20px; text-decoration: none; color: inherit; }
+    .pt-d .logo-img { height: 88px; width: auto; display: block; margin: -16px 0; }
+    .pt-d .logo-mark {
+      width: 30px; height: 30px; border-radius: 50%; background: var(--accent);
+      display: flex; align-items: center; justify-content: center; color: white;
+      font-size: 14px; font-family: 'Fat Frank', sans-serif;
+    }
+    .pt-d .nav-links { display: flex; gap: 32px; font-size: 14px; color: var(--ink-soft); }
+    .pt-d .nav-links a:hover { color: var(--ink); }
+    .pt-d .nav-cta-row { display: flex; gap: 10px; align-items: center; }
+    .pt-d .nav-login { font-size: 14px; color: var(--ink-soft); padding: 8px 12px; }
+    .pt-d .nav-login:hover { color: var(--ink); }
+    .pt-d .lang-switch { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; background: white; transition: border-color 0.15s; }
+    .pt-d .lang-switch:hover { border-color: var(--ink-soft); }
+    .pt-d .lang-switch img { width: 18px; height: 18px; border-radius: 50%; object-fit: cover; display: block; }
+    .pt-d .lang-switch span { font-size: 12px; font-weight: 600; color: var(--ink); letter-spacing: 0.04em; }
+
+    /* BUTTONS */
+    .pt-d .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 18px; border-radius: 100px; border: none;
+      font-size: 14px; font-weight: 500;
+      transition: all 180ms cubic-bezier(.4,0,.2,1);
+    }
+    .pt-d .btn-primary { background: var(--ink); color: var(--paper); }
+    .pt-d .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+    .pt-d .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line-2); }
+    .pt-d .btn-ghost:hover { background: white; border-color: var(--ink); }
+    .pt-d .btn-lg { padding: 14px 24px; font-size: 15px; }
+    .pt-d .btn-arrow {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--accent); color: white; display: inline-flex;
+      align-items: center; justify-content: center; font-size: 11px;
+    }
+    .pt-d .btn-primary .btn-arrow { background: var(--paper); color: var(--ink); }
+
+    /* HERO */
+    .pt-d .hero {
+      position: relative; overflow: hidden;
+      padding: 72px 0 96px;
+      background:
+        radial-gradient(ellipse 60% 60% at 80% 20%, rgba(255,106,31,0.14) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 10% 90%, rgba(255,106,31,0.06) 0%, transparent 60%);
+    }
+    .pt-d .hero-grid {
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: center;
+    }
+    .pt-d .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: white; border: 1px solid var(--line);
+      color: var(--ink); padding: 6px 14px; border-radius: 100px;
+      font-size: 13px; font-weight: 500; margin-bottom: 24px;
+    }
+    .pt-d .pill::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 8px var(--accent);
+      animation: ptDPulse 2s ease infinite;
+    }
+    @keyframes ptDPulse {
+      0%, 100% { opacity: 1; } 50% { opacity: 0.4; }
+    }
+    .pt-d .hero h1 {
+      font-family: 'Fat Frank', system-ui, sans-serif;
+      font-weight: 400;
+      font-size: clamp(48px, 6vw, 80px);
+      line-height: 0.98; letter-spacing: -0.025em;
+      margin-bottom: 24px;
+    }
+    .pt-d .hero h1 em { color: var(--accent); }
+    .pt-d .hero p.lead {
+      font-size: 18px; color: var(--ink-soft);
+      max-width: 480px; margin-bottom: 36px;
+    }
+    .pt-d .hero-cta { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .pt-d .hero-meta {
+      margin-top: 32px; display: flex; gap: 20px 24px;
+      font-size: 13px; color: var(--ink-soft);
+      flex-wrap: wrap;
+    }
+    .pt-d .hero-meta-item { display: flex; align-items: center; gap: 8px; }
+    .pt-d .hero-meta-item::before {
+      content: '✓'; color: var(--accent); font-weight: bold;
+    }
+
+    /* HERO CARD — ROI mockup */
+    .pt-d .roi-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 20px; padding: 32px;
+      box-shadow: 0 30px 80px rgba(26,23,20,0.10);
+      position: relative;
+    }
+    .pt-d .roi-card-head {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-bottom: 16px; border-bottom: 1px solid var(--line);
+      margin-bottom: 20px;
+    }
+    .pt-d .roi-card-title { font-size: 13px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.08em; }
+    .pt-d .roi-card-live { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--accent-deep); font-weight: 600; }
+    .pt-d .roi-card-live::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); animation: ptDPulse 2s infinite;
+    }
+    .pt-d .roi-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .pt-d .roi-row:last-of-type { border-bottom: none; }
+    .pt-d .roi-row span:first-child { color: var(--ink-soft); }
+    .pt-d .roi-row span:last-child { font-family: 'JetBrains Mono', monospace; }
+    .pt-d .roi-total {
+      margin-top: 20px; padding-top: 20px; border-top: 2px solid var(--ink);
+      display: flex; justify-content: space-between; align-items: baseline;
+    }
+    .pt-d .roi-total-label { font-size: 14px; color: var(--ink-soft); }
+    .pt-d .roi-total-value {
+      font-family: 'Fat Frank', system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 48px; color: var(--accent); line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .pt-d .roi-mascot {
+      position: absolute; right: -32px; top: -52px; width: 130px;
+      transform: rotate(8deg);
+      filter: drop-shadow(0 12px 24px rgba(26,23,20,0.18));
+    }
+    .pt-d .roi-bars { margin-top: 20px; display: flex; align-items: flex-end; gap: 6px; height: 56px; }
+    .pt-d .roi-bar { flex: 1; background: var(--accent-soft); border-radius: 4px; }
+    .pt-d .roi-bar.full { background: var(--accent); }
+
+    /* QUICK FACTS */
+    .pt-d .facts {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+      border-top: 1px solid var(--line);
+      background: white;
+    }
+    .pt-d .fact { padding: 28px 24px; border-right: 1px solid var(--line); }
+    .pt-d .fact:last-child { border-right: none; }
+    .pt-d .fact-num {
+      font-family: 'Fat Frank', system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 44px; line-height: 1; margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .pt-d .fact-num em { font-style: italic; color: var(--accent); }
+    .pt-d .fact-label { font-size: 14px; color: var(--ink-soft); }
+
+    /* TRUST */
+    .pt-d .trust { padding: 40px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: white; }
+    .pt-d .trust-inner {
+      display: flex; align-items: center; gap: 48px;
+      justify-content: space-between; flex-wrap: wrap;
+    }
+    .pt-d .trust-label { font-size: 13px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.1em; flex-shrink: 0; }
+    .pt-d .trust-logos { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+    .pt-d .trust-logo { font-family: 'Fat Frank', serif; font-size: 22px; color: var(--ink-soft); opacity: 0.75; transition: opacity 200ms; }
+    .pt-d .trust-logo:hover { opacity: 1; color: var(--ink); }
+    .pt-d .trust-logo.serif { font-family: 'Fat Frank', system-ui, sans-serif; font-weight: 500; }
+    .pt-d .trust-logo.upper { text-transform: uppercase; letter-spacing: 0.12em; font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 600; }
+
+    /* STATS */
+    .pt-d .stats {
+      padding: 96px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .pt-d .stats-head { text-align: center; margin-bottom: 56px; }
+    .pt-d .stats-head h2 {
+      font-family: 'Fat Frank', system-ui, sans-serif;
+      font-weight: 400;
+      font-size: clamp(36px, 4.4vw, 56px);
+      line-height: 1.05; letter-spacing: -0.02em;
+    }
+    .pt-d .stats-head h2 em { color: var(--accent); }
+    .pt-d .stats-head p { color: var(--ink-soft); margin-top: 16px; max-width: 720px; margin-left: auto; margin-right: auto; }
+    .pt-d .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .pt-d .stat-card {
+      background: white; border: 1px solid var(--line);
+      border-radius: 16px; padding: 32px;
+      transition: all 200ms;
+    }
+    .pt-d .stat-card:hover { border-color: var(--ink); transform: translateY(-2px); }
+    .pt-d .stat-num {
+      font-family: 'Fat Frank', system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 64px; line-height: 1;
+      color: var(--accent); margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .pt-d .stat-num .unit { font-size: 32px; opacity: 0.7; font-style: normal; }
+    .pt-d .stat-label { font-weight: 600; margin-bottom: 8px; }
+    .pt-d .stat-sub { font-size: 14px; color: var(--ink-soft); }
+
+    /* HOW */
+    .pt-d .how { padding: 96px 0; background: white; }
+    .pt-d .how-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center; }
+    .pt-d .how-grid h2 {
+      font-family: 'Fat Frank', system-ui, sans-serif; font-weight: 400;
+      font-size: clamp(32px, 3.6vw, 48px); line-height: 1.05;
+      letter-spacing: -0.02em; margin-bottom: 16px;
+    }
+    .pt-d .how-grid h2 em { color: var(--accent); }
+    .pt-d .step-list { list-style: none; counter-reset: step; }
+    .pt-d .step-item {
+      counter-increment: step;
+      padding: 24px 0; border-top: 1px solid var(--line);
+      display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start;
+    }
+    .pt-d .step-item:last-child { border-bottom: 1px solid var(--line); }
+    .pt-d .step-item::before {
+      content: '0' counter(step);
+      font-family: 'Fat Frank', system-ui, sans-serif;
+      font-size: 22px; color: var(--accent); padding-top: 0;
+    }
+    .pt-d .step-item h3 {
+      font-family: 'Fat Frank', system-ui, sans-serif; font-weight: 500;
+      font-size: 22px; margin-bottom: 6px; letter-spacing: -0.01em;
+    }
+    .pt-d .step-item p { color: var(--ink-soft); font-size: 15px; }
+    .pt-d .how-visual {
+      aspect-ratio: 4/3.2;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .pt-d .how-sticker {
+      width: 92%; max-width: 460px; height: auto; display: block;
+    }
+
+    /* FEATURES */
+    .pt-d .features { padding: 96px 0; border-top: 1px solid var(--line); }
+    .pt-d .features-head { margin-bottom: 48px; }
+    .pt-d .features-eyebrow {
+      font-size: 13px; color: var(--accent-deep); font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      display: flex; align-items: center; gap: 8px; margin-bottom: 16px;
+    }
+    .pt-d .features-eyebrow::before {
+      content: ''; display: inline-block; width: 6px; height: 6px;
+      border-radius: 50%; background: var(--accent);
+    }
+    .pt-d .features-head h2 {
+      font-family: 'Fat Frank', system-ui, sans-serif; font-weight: 400;
+      font-size: clamp(36px, 4vw, 56px);
+      line-height: 1.05; letter-spacing: -0.02em; max-width: 720px;
+    }
+    .pt-d .features-head h2 em { color: var(--accent); font-style: italic; }
+    .pt-d .features-sub {
+      margin-top: 18px; font-size: 15px; color: var(--ink-soft); max-width: 600px;
+    }
+    .pt-d .benefits-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+      background: var(--line); border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
+    }
+    .pt-d .benefit {
+      background: var(--paper); padding: 36px 36px 40px;
+      display: flex; gap: 20px; transition: background 150ms;
+    }
+    .pt-d .benefit:hover { background: white; }
+    .pt-d .benefit-num {
+      font-family: 'Fat Frank', system-ui, sans-serif;
+      font-size: 14px; font-style: italic; color: var(--accent);
+      flex-shrink: 0; padding-top: 4px; min-width: 28px;
+    }
+    .pt-d .benefit h3 {
+      font-family: 'Fat Frank', system-ui, sans-serif;
+      font-weight: 500; font-size: 22px; margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .pt-d .benefit p { color: var(--ink-soft); font-size: 15px; line-height: 1.5; }
+    .pt-d .feat {
+      background: white; border: 1px solid var(--line);
+      border-radius: 14px; padding: 28px;
+      transition: all 200ms;
+    }
+    .pt-d .feat:hover { border-color: var(--ink); transform: translateY(-2px); }
+    .pt-d .feat-tag {
+      display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      color: var(--accent-deep); background: var(--accent-soft); padding: 4px 8px; border-radius: 4px;
+      margin-bottom: 16px;
+    }
+    .pt-d .feat h3 {
+      font-family: 'Fat Frank', system-ui, sans-serif; font-weight: 500;
+      font-size: 20px; margin-bottom: 8px; letter-spacing: -0.01em;
+    }
+    .pt-d .feat p { color: var(--ink-soft); font-size: 14px; }
+
+    /* QUOTES */
+    .pt-d .quote-row {
+      padding: 96px 0;
+      border-top: 1px solid var(--line);
+    }
+    .pt-d .quote-row .wrap > div { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .pt-d .quote-card {
+      padding: 32px; border: 1px solid var(--line); border-radius: 16px;
+      background: white;
+    }
+    .pt-d .quote-stars { color: var(--accent); margin-bottom: 16px; font-size: 14px; letter-spacing: 4px; }
+    .pt-d .quote-card blockquote {
+      font-family: 'Fat Frank', system-ui, sans-serif; font-weight: 400;
+      font-size: 22px; line-height: 1.3; letter-spacing: -0.01em;
+      margin-bottom: 24px;
+    }
+    .pt-d .quote-author { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+    .pt-d .quote-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-family: 'Fat Frank', sans-serif; font-size: 16px;
+    }
+    .pt-d .quote-author-name strong { display: block; }
+    .pt-d .quote-author-name span { color: var(--ink-soft); font-size: 13px; }
+
+    /* FAQ */
+    .pt-d .faq { padding: 96px 0; border-top: 1px solid var(--line); background: white; }
+    .pt-d .faq-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; }
+    .pt-d .faq-grid h2 {
+      font-family: 'Fat Frank', system-ui, sans-serif; font-weight: 400;
+      font-size: clamp(36px, 4vw, 48px); letter-spacing: -0.02em; line-height: 1.05;
+    }
+    .pt-d .faq-grid h2 em { color: var(--accent); }
+    .pt-d .faq-list { display: flex; flex-direction: column; }
+    .pt-d .faq-item { border-top: 1px solid var(--line); padding: 20px 0; }
+    .pt-d .faq-item:last-child { border-bottom: 1px solid var(--line); }
+    .pt-d .faq-item summary {
+      list-style: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Fat Frank', system-ui, sans-serif; font-weight: 500;
+      font-size: 19px; letter-spacing: -0.01em;
+    }
+    .pt-d .faq-item summary::-webkit-details-marker { display: none; }
+    .pt-d .faq-item summary::after {
+      content: '+'; font-family: 'Fat Frank', system-ui, sans-serif;
+      color: var(--accent); font-size: 26px;
+      transition: transform 200ms;
+    }
+    .pt-d .faq-item[open] summary::after { transform: rotate(45deg); }
+    .pt-d .faq-item p { color: var(--ink-soft); font-size: 15px; margin-top: 12px; }
+
+    /* CTA */
+    .pt-d .cta {
+      margin: 0 32px 96px; max-width: 1136px;
+      margin-left: auto; margin-right: auto;
+      background: var(--ink); color: var(--paper);
+      border-radius: 24px; padding: 80px 48px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .pt-d .cta::before {
+      content: ''; position: absolute; inset: -20%;
+      background: radial-gradient(circle at 50% 0%, rgba(255,106,31,0.22) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .pt-d .cta-inner { position: relative; }
+    .pt-d .cta .pill {
+      background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18); color: var(--paper);
+    }
+    .pt-d .cta h2 {
+      font-family: 'Fat Frank', system-ui, sans-serif; font-weight: 400;
+      font-size: clamp(40px, 5vw, 64px);
+      line-height: 1; letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .pt-d .cta h2 em { color: #ff9355; }
+    .pt-d .cta p { color: rgba(246,241,234,0.7); font-size: 17px; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .pt-d .cta .btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .pt-d .cta .btn-primary { background: var(--accent); color: white; }
+    .pt-d .cta .btn-primary:hover { background: white; color: var(--ink); }
+    .pt-d .cta .btn-primary .btn-arrow { background: var(--ink); color: var(--paper); }
+    .pt-d .cta .btn-ghost { background: transparent; color: var(--paper); border-color: rgba(255,255,255,0.25); }
+    .pt-d .cta .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: var(--paper); }
+
+    /* FOOTER */
+    .pt-d footer { border-top: 1px solid var(--line); padding: 56px 0 40px; }
+    .pt-d .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; }
+    .pt-d footer h4 { font-family: 'Fat Frank', system-ui, sans-serif; font-size: 16px; margin-bottom: 16px; color: var(--ink); font-weight: 500; }
+    .pt-d footer ul { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
+    .pt-d footer ul a { color: var(--ink-soft); }
+    .pt-d footer ul a:hover { color: var(--accent); }
+    .pt-d .footer-tag { color: var(--ink-soft); font-size: 14px; margin-top: 12px; max-width: 320px; }
+    .pt-d .footer-legal {
+      margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line);
+      display: flex; justify-content: space-between; font-size: 13px; color: var(--ink-soft);
+    }
+
+    /* --- RESPONSIVE: tablet (≤900px) --- */
+    @media (max-width: 900px) {
+      .pt-d .wrap { padding: 0 24px; }
+      .pt-d .nav-inner { padding: 4px 24px; gap: 12px; }
+      .pt-d .nav-links { display: none; }
+      .pt-d .hero { padding: 48px 0 64px; }
+      .pt-d .hero-grid { grid-template-columns: 1fr; gap: 56px; }
+      .pt-d .roi-card { padding: 28px; }
+      .pt-d .roi-mascot { width: 100px; right: -10px; top: -50px; }
+      .pt-d .facts { grid-template-columns: repeat(2, 1fr); }
+      .pt-d .fact:nth-child(2n) { border-right: none; }
+      .pt-d .fact:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .pt-d .stats { padding: 64px 0; }
+      .pt-d .stats-grid { grid-template-columns: 1fr; gap: 16px; }
+      .pt-d .how { padding: 64px 0; }
+      .pt-d .how-grid { grid-template-columns: 1fr; gap: 32px; }
+      .pt-d .features { padding: 64px 0; }
+      .pt-d .benefits-grid { grid-template-columns: 1fr; }
+      .pt-d .quote-row { padding: 64px 0; }
+      .pt-d .faq { padding: 64px 0; }
+      .pt-d .faq-grid { grid-template-columns: 1fr; gap: 32px; }
+      .pt-d .cta { padding: 56px 28px; margin: 0 16px 64px; border-radius: 18px; }
+      .pt-d footer { padding: 40px 0 32px; }
+      .pt-d .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .pt-d .footer-legal { flex-direction: column; gap: 12px; align-items: flex-start; }
+      .pt-d .trust-inner { gap: 24px; }
+      .pt-d .trust-logos { gap: 28px; }
+      .pt-d .features-head h2, .pt-d .stats-head h2 { max-width: none; }
+    }
+
+    /* --- RESPONSIVE: phone (≤600px) --- */
+    @media (max-width: 600px) {
+      .pt-d .wrap { padding: 0 18px; }
+      .pt-d .nav-inner { padding: 4px 18px; }
+      .pt-d .nav-login { display: none; }
+      .pt-d .logo-img { height: 56px; margin: -8px 0; }
+      .pt-d .nav-cta-row { gap: 8px; }
+      .pt-d .btn { font-size: 13px; padding: 11px 14px; }
+      .pt-d .btn-lg { padding: 13px 18px; font-size: 14px; }
+      .pt-d .hero { padding: 32px 0 56px; }
+      .pt-d .roi-card { padding: 22px; }
+      .pt-d .roi-mascot { width: 78px; right: -6px; top: -38px; }
+      .pt-d .roi-total { flex-direction: column; align-items: flex-start; gap: 4px; }
+      .pt-d .roi-total-value { font-size: 32px !important; }
+      .pt-d .facts { grid-template-columns: 1fr; }
+      .pt-d .fact { border-right: none; border-bottom: 1px solid var(--line); padding: 22px 16px; }
+      .pt-d .fact:last-child { border-bottom: none; }
+      .pt-d .fact-num { font-size: 36px; }
+      .pt-d .stat-card { padding: 26px; }
+      .pt-d .step-item { gap: 16px; padding: 22px 0; }
+      .pt-d .step-item::before { font-size: 18px; }
+      .pt-d .benefit { padding: 26px 24px 28px; gap: 16px; }
+      .pt-d .quote-card { padding: 24px; }
+      .pt-d .quote-card blockquote { font-size: 19px; }
+      .pt-d .faq-item summary { font-size: 17px; }
+      .pt-d .cta { padding: 48px 22px; margin: 0 12px 56px; border-radius: 16px; }
+      .pt-d .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+      .pt-d .hero-meta { gap: 8px 16px; }
+      .pt-d .trust { padding: 28px 0; }
+      .pt-d .trust-inner { gap: 16px; }
+      .pt-d .trust-logo { font-size: 18px; }
+      .pt-d .trust-logo.upper { font-size: 14px; }
+    }
+
+    /* --- PREFERS REDUCED MOTION --- */
+    @media (prefers-reduced-motion: reduce) {
+      .pt-d *, .pt-d *::before, .pt-d *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="pt-root">
+<div class="pt-d">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo" aria-label="PubTrivia">
+        <img src="assets/pubtrivia-logo.png" alt="PubTrivia" class="logo-img">
+      </a>
+      <div class="nav-links">
+        <a href="#how">Hoe het werkt</a>
+        <a href="#features">Functies</a>
+        <a href="#stats">Resultaten</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-cta-row">
+        <a href="/en" class="lang-switch" aria-label="Switch to English">
+          <img src="assets/flags/gb.png" alt="">
+          <span>EN</span>
+        </a>
+        <a href="https://app.pub-trivia.nl" class="nav-login">Inloggen</a>
+        <a href="#demo" class="btn btn-primary">
+          Demo aanvragen
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="pill"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:8px;vertical-align:middle"></span>In pilotfase · op zoek naar de eerste 5 kroegen</div>
+          <h1>
+            Eén rondje<br>
+            meer per gezelschap.<br>
+            <em>Elke avond.</em>
+          </h1>
+          <p class="lead">
+            PubTrivia houdt gasten in de zaak met een quiz die 24/7 op je TV draait. Geen quizmaster, geen gedoe — gewoon meer omzet op de uren waar je nu omzet mist.
+          </p>
+          <div class="hero-cta">
+            <a href="#demo" class="btn btn-primary btn-lg">
+              Vraag een demo aan
+              <span class="btn-arrow">→</span>
+            </a>
+            <a href="#how" class="btn btn-ghost btn-lg">Hoe het werkt</a>
+          </div>
+          <div class="hero-meta">
+            <div class="hero-meta-item">3 maanden gratis pilot</div>
+            <div class="hero-meta-item">TV met HDMI nodig</div>
+            <div class="hero-meta-item">Geen creditcard</div>
+          </div>
+        </div>
+
+        <div class="roi-card">
+          <img class="roi-mascot" src="assets/monster-duo.webp" alt="">
+          <div class="roi-card-head">
+            <span class="roi-card-title">Voorbeeld · doordeweekse avond</span>
+            <span class="roi-card-live">DEMO</span>
+          </div>
+          <div class="roi-row"><span>Gezelschappen actief</span><span>14</span></div>
+          <div class="roi-row"><span>Spelers in de zaak</span><span>52</span></div>
+          <div class="roi-row"><span>Gem. verblijfsduur</span><span>+38 min</span></div>
+          <div class="roi-row"><span>Extra rondes verkocht</span><span style="color:var(--accent);font-weight:600">+19</span></div>
+          <div class="roi-bars">
+            <div class="roi-bar" style="height:40%"></div>
+            <div class="roi-bar" style="height:55%"></div>
+            <div class="roi-bar" style="height:50%"></div>
+            <div class="roi-bar" style="height:70%"></div>
+            <div class="roi-bar full" style="height:85%"></div>
+            <div class="roi-bar full" style="height:95%"></div>
+            <div class="roi-bar full" style="height:100%"></div>
+          </div>
+          <div class="roi-total">
+            <span class="roi-total-label">Voorspelde extra omzet (50 spelers)</span>
+            <span class="roi-total-value" style="font-size:35px">€200-€300</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK FACTS -->
+  <section style="background:white">
+    <div class="wrap">
+      <div class="facts">
+        <div class="fact">
+          <div class="fact-num"><em>5</em></div>
+          <div class="fact-label">pilotkroegen gezocht — drie maanden gratis</div>
+        </div>
+        <div class="fact">
+          <div class="fact-num">24/<em>7</em></div>
+          <div class="fact-label">automatisch — geen quizmaster</div>
+        </div>
+        <div class="fact">
+          <div class="fact-num"><em>10</em> min</div>
+          <div class="fact-label">van HDMI tot eerste vraag</div>
+        </div>
+        <div class="fact">
+          <div class="fact-num">3 mnd</div>
+          <div class="fact-label">gratis pilot — geen creditcard</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="wrap">
+      <div class="trust-inner">
+        <div class="trust-label">Pilotkroegen gezocht in</div>
+        <div class="trust-logos">
+          <span class="trust-logo">Weesp</span>
+          <span class="trust-logo serif">Muiden</span>
+          <span class="trust-logo upper">Naarden</span>
+          <span class="trust-logo">Amsterdam-Oost</span>
+          <span class="trust-logo serif">Het Gooi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" id="stats">
+    <div class="wrap">
+      <div class="stats-head">
+        <h2>Wat we gaan meten<br>in de <em>pilot.</em></h2>
+        <p>PubTrivia is net gelanceerd. Dit zijn de doelen waar we ons in elke pilotkroeg op richten, en wat we eerlijk gaan meten om te bewijzen dat het werkt.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-num" style="font-size:48px">1</div>
+          <div class="stat-label">Verblijfsduur omhoog</div>
+          <div class="stat-sub">We meten hoeveel langer gasten blijven als de quiz draait. Voor- en nameting per pilotkroeg.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" style="font-size:48px">2</div>
+          <div class="stat-label">Rondes per gezelschap</div>
+          <div class="stat-sub">We tellen of er gemiddeld een rondje extra wordt besteld op de avonden waarop PubTrivia draait.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" style="font-size:48px">3</div>
+          <div class="stat-label">Extra omzet / avond</div>
+          <div class="stat-sub">Voor- en nameting van de kassa op rustige avonden. Eerlijke cijfers, geen marketingpraat.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="how" id="how">
+    <div class="wrap">
+      <div class="how-grid">
+        <div>
+          <div class="pill">Setup</div>
+          <h2>Tien minuten<br>van uitpakken tot <em>eerste vraag.</em></h2>
+          <p style="color:var(--ink-soft);margin-bottom:32px">Geen installateur. Geen training. Een TV, een QR-code, klaar.</p>
+          <ol class="step-list">
+            <li class="step-item">
+              <div>
+                <h3>TV koppelen</h3>
+                <p>Open onze link op een smart-TV, Chromecast of Apple TV. We helpen op afstand mee.</p>
+              </div>
+            </li>
+            <li class="step-item">
+              <div>
+                <h3>QR-codes — zelf printen</h3>
+                <p>Wij maken de codes voor jouw kroeg of eetcafé, jij print ze zelf op A4. Op tafels, aan de bar, bij de wc.
+Printen en draaien maar!</p>
+              </div>
+            </li>
+            <li class="step-item">
+              <div>
+                <h3>De quiz draait — voor altijd</h3>
+                <p>24/7 actief. Of alleen op rustige avonden.<br>Kies wat past bij jouw rooster.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="how-visual">
+          <img class="how-sticker" src="assets/qr-sticker.webp" alt="PubTrivia QR-sticker — Scan To Play" loading="lazy" width="920" height="894">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="wrap">
+      <div class="features-head">
+        <div class="features-eyebrow">Waarom PubTrivia</div>
+        <h2>Meer omzet op de uren<br>die <em>nu leeg staan.</em></h2>
+        <p class="features-sub">Niet zomaar een quiz — een omzet-tool die toevallig leuk is.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit">
+          <div class="benefit-num">01</div>
+          <div>
+            <h3>Eén rondje meer per gezelschap</h3>
+            <p>Gasten blijven langer als er iets te doen is. Ze bestellen een tweede biertje — gewoon omdat ze willen blijven voor de volgende vraag. Werkt aan tafels én aan de bar.</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">02</div>
+          <div>
+            <h3>Vult dinsdag- en woensdagavonden</h3>
+            <p>Je dode dagen worden je verrassende avonden. Geef gasten een reden om langs te komen op de uren waar je nu omzet mist.</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">03</div>
+          <div>
+            <h3>Geen quizmaster, geen werk</h3>
+            <p>De vragen rollen vanzelf. Je personeel hoeft niets te doen, te organiseren, of bij te houden. TV aan — meer niet.</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">04</div>
+          <div>
+            <h3>Promoot je eigen menu op het scherm</h3>
+            <p>Tussen de rondes laat je je borrelhapjes, dagaanbieding of evenementen zien. Met je eigen logo erbij.</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">05</div>
+          <div>
+            <h3>Werkt in NL of EN</h3>
+            <p>Vragen in het Nederlands of Engels. Toeristisch buurtje? Engelse modus aan en je internationale gasten doen ook mee.</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">06</div>
+          <div>
+            <h3>24/7 actief, ook als jij vrij bent</h3>
+            <p>Werkt door als je dicht bent of op vakantie. Aanzetten en vergeten — of alleen op rustige avonden draaien. Jouw keuze.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER NOTE -->
+  <section class="quote-row">
+    <div class="wrap">
+      <div style="grid-template-columns:1fr;max-width:880px;margin:0 auto">
+        <div class="quote-card">
+          <div class="quote-stars" style="letter-spacing:0;font-size:13px;font-weight:600">EERLIJK VERHAAL</div>
+          <blockquote>"PubTrivia draait. De software werkt. Maar er hangt nog geen TV in een echte kroeg — daar zoek ik nu de eerste vijf voor. <span style="font-family:'Inter',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;display:block;margin-top:16px;line-height:1.5;color:var(--ink)">Drie maanden gratis, ik kom langs, ik installeer, en samen meten we of dit echt iets toevoegt op een rustige dinsdag.</span>"</blockquote>
+          <div class="quote-author">
+            <div class="quote-avatar">B</div>
+            <div class="quote-author-name">
+              <strong>Bas Dumoulin</strong>
+              <span>Maker · WonderLoop, Weesp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="faq-grid">
+        <h2>Vragen.<br><em>Eerlijke antwoorden.</em></h2>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Heb ik een quizmaster nodig?</summary>
+            <p>Nee. Vragen, antwoorden, scores en leaderboard draaien volledig automatisch. Jij hoeft niets aan de microfoon te doen.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Wat kost het na de pilot?</summary>
+            <p>Na drie maanden gratis kies je zelf of je doorgaat. Vaste maandprijs, vergelijkbaar met een streamingdienst — geen extra fee op je omzet.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Wat heb ik aan apparatuur nodig?</summary>
+            <p>Een TV met hdmi ingang en internet. Wij helpen je het opzetten.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Wat als niemand meespeelt?</summary>
+            <p>De TV laat ook zonder spelers vragen, weetjes en jouw aanbiedingen zien. Vaak begint één tafel — daarna volgt de rest.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Kan ik het ook alleen op rustige avonden gebruiken?</summary>
+            <p>Ja. Je kiest zelf het rooster. Of laat het 24/7 lopen — beide werkt.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:0">
+    <div class="cta" id="demo">
+      <div class="cta-inner">
+        <div class="pill" style="margin:0 auto 24px">Drie maanden, op het huis</div>
+        <h2>Klaar voor één<br>rondje extra <em>per gezelschap?</em></h2>
+        <p>Geen creditcard, geen verplichtingen. We bellen je binnen 24 uur en zetten 'm samen op.</p>
+        <div class="btn-row">
+          <a href="mailto:info@pub-trivia.nl?subject=Demo%20PubTrivia&body=Hoi%20Bas%2C%0A%0AIk%20wil%20graag%20een%20demo%20van%20PubTrivia.%20Mijn%20kroeg%20is%3A%20%5Bnaam%5D%20in%20%5Bplaats%5D.%20Bel%20me%20gerust%20op%20%5Btelefoon%5D." class="btn btn-primary btn-lg">
+            Vraag een demo aan
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="https://wa.me/31681025396?text=Hoi%20Bas%2C%20ik%20wil%20meer%20weten%20over%20PubTrivia%20voor%20mijn%20kroeg" class="btn btn-ghost btn-lg">Stuur een appje</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom:16px">
+            <img src="assets/pubtrivia-logo.png" alt="PubTrivia" style="height:56px;width:auto">
+          </div>
+          <p class="footer-tag">24/7 digitale pubquiz voor de Nederlandse horeca. Onderdeel van WonderLoop, Amsterdam-Weesp.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#how">Hoe het werkt</a></li>
+            <li><a href="#features">Functies</a></li>
+            <li><a href="#stats">Resultaten</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@pub-trivia.nl">info@pub-trivia.nl</a></li>
+            <li><a href="https://wa.me/31681025396">WhatsApp</a></li>
+            <li><a href="https://app.pub-trivia.nl">Inloggen</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Juridisch</h4>
+          <ul>
+            <li><a href="/voorwaarden">Voorwaarden</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <span>© <span id="yr"></span> WonderLoop · KVK 91926440</span>
+        <span>Gemaakt in Amsterdam-Weesp</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</div>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
