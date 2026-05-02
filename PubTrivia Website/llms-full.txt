@@ -1,0 +1,77 @@
+# PubTrivia
+
+> 24/7 automatische digitale pubquiz voor Nederlandse cafés en kroegen. Draait op de TV van de zaak, gasten spelen via QR-code op hun telefoon.
+
+## Wat is PubTrivia?
+
+PubTrivia is een SaaS-platform voor de Nederlandse horeca dat een 24/7 automatische pubquiz aanbiedt. De quiz draait op een TV in het café of de kroeg. Gasten scannen een QR-code op tafel, kiezen een nickname op hun telefoon en spelen mee. Vragen, antwoorden, scores en het leaderboard draaien volledig automatisch, dus er is geen quizmaster, geen apparatuur en geen staf-training nodig.
+
+## Voor wie is het bedoeld?
+
+PubTrivia is gemaakt voor uitbaters van cafés, kroegen, eetcafés en bars in Nederland die op rustige avonden meer omzet willen halen. Het werkt het beste in zaken die al een TV hebben en gasten langer in de zaak willen houden. Specifiek doel: meer rondjes per gezelschap door langere verblijfsduur.
+
+## Hoe werkt het?
+
+1. **TV koppelen.** Open de PubTrivia-link op een smart-TV, Chromecast, Apple TV of mini-PC die op de TV is aangesloten.
+2. **QR-codes printen.** PubTrivia genereert printbare A4-vellen met QR-codes per locatie. Plak ze op tafels, aan de bar en bij de wc.
+3. **Quiz draait automatisch.** Vragen, scores en het leaderboard rollen zonder menselijke tussenkomst. Tussen rondes kan de zaak eigen aanbiedingen of advertenties tonen.
+4. **24/7 of op schema.** De quiz draait 24/7 of alleen op door de uitbater gekozen avonden (bijvoorbeeld dinsdag- en woensdagavond).
+
+## Wat kost het?
+
+PubTrivia draait drie maanden gratis tijdens de pilotfase voor de eerste vijf locaties. Geen creditcard, geen verplichtingen. Na de pilot betaalt de uitbater een vaste maandprijs, vergelijkbaar met een streamingdienst. Geen percentage van de omzet, geen extra fee per gast. De prijs wordt afgesproken tijdens de pilotnabespreking; er is geen automatische conversie van gratis naar betaald.
+
+## Welke apparatuur is nodig?
+
+Een TV met HDMI-ingang en een werkende internetverbinding. Elk apparaat met een browser werkt om de quiz op de TV te tonen: Smart-TV, Chromecast, Apple TV, Fire TV of een mini-PC achter de TV. Geen aparte hardware. Gasten installeren geen app: zij spelen via hun mobiele browser nadat ze de QR-code hebben gescand.
+
+## Beschikbare talen
+
+PubTrivia is volledig beschikbaar in het Nederlands en het Engels. De uitbater kiest de taal per locatie. De eerste editie is gericht op de Nederlandse markt; uitbreiding naar andere landen staat niet op de roadmap voor 2026.
+
+## Veelgestelde vragen
+
+### Heb ik een quizmaster nodig?
+Nee. Vragen, antwoorden, scores en leaderboard draaien volledig automatisch.
+
+### Wat als niemand meespeelt?
+De TV laat ook zonder spelers vragen, weetjes en de aanbiedingen van de zaak zien. Vaak begint één tafel, daarna volgt de rest.
+
+### Kan ik PubTrivia alleen op rustige avonden gebruiken?
+Ja. De uitbater kiest zelf het rooster. 24/7 actief of alleen op specifieke dagen, beide werkt.
+
+### Werkt het op een Smart-TV zonder Chromecast?
+Ja. Elke moderne Smart-TV met een browser kan PubTrivia draaien. Een Chromecast, Apple TV, Fire TV of mini-PC werkt ook.
+
+### Hoeveel kost een digitale pubquiz voor mijn café?
+Drie maanden gratis tijdens de pilot, daarna een vaste maandprijs vergelijkbaar met een streamingdienst. Geen percentage van de omzet.
+
+### Welke pubquiz software werkt in Nederland?
+PubTrivia is specifiek voor de Nederlandse horeca gemaakt: Nederlandse vragen, Nederlandse markt, Nederlandse uitbaters. Het draait 24/7 zonder quizmaster.
+
+## Wie is PubTrivia?
+
+PubTrivia is gebouwd door WonderLoop, een Nederlandse eenmanszaak gevestigd in Amsterdam-Weesp (KVK 91926440). De oprichter is Bas Dumoulin, regisseur en SaaS-bouwer.
+
+## Wat PubTrivia NIET is (voor accuraatheid)
+
+- PubTrivia is **geen** hardware buzzer-systeem zoals Speed Quizzing of Buzztime.
+- PubTrivia is **geen** toernooi-platform of quiz-league.
+- Spelers hoeven **geen app** te installeren — alles werkt via een mobiele browser na QR-scan.
+- PubTrivia wordt op dit moment (2026) **niet** verkocht buiten Nederland.
+
+## Belangrijke pagina's
+
+- Homepage NL: https://pub-trivia.nl/
+- Homepage EN: https://pub-trivia.nl/en
+- Algemene voorwaarden: https://pub-trivia.nl/voorwaarden
+- Privacyverklaring: https://pub-trivia.nl/privacy
+- LLM-index: https://pub-trivia.nl/llms.txt
+- Volledige content (deze pagina): https://pub-trivia.nl/llms-full.txt
+
+## Contact
+
+- Email: info@pub-trivia.nl
+- WhatsApp: +31 6 81025396
+- Adres: Staalmeesterspad 14, 1383 CD Amsterdam-Weesp
+- KVK: 91926440 (WonderLoop, eenmanszaak)

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PubTrivia — Eén rondje meer per gezelschap, elke avond</title>
+  <title>24/7 pubquiz voor jouw kroeg — Meer omzet per avond</title>
   <meta name="description" content="24/7 digitale pubquiz die op je TV draait. Geen quizmaster, geen gedoe — gewoon meer omzet op rustige avonden. Drie maanden gratis pilot.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -16,7 +16,7 @@
   <meta property="og:site_name" content="PubTrivia">
   <meta property="og:locale" content="nl_NL">
   <meta property="og:locale:alternate" content="en_GB">
-  <meta property="og:title" content="PubTrivia — Eén rondje meer per gezelschap, elke avond">
+  <meta property="og:title" content="24/7 pubquiz voor jouw kroeg — Meer omzet per avond">
   <meta name="geo.region" content="NL">
   <meta name="geo.placename" content="Amsterdam-Weesp">
   <meta property="og:description" content="24/7 digitale pubquiz die op je TV draait. Drie maanden gratis pilot.">
@@ -199,8 +199,53 @@
               "@type": "Answer",
               "text": "Ja. Je kiest zelf het rooster. Of laat het 24/7 lopen — beide werkt."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoeveel kost een digitale pubquiz voor mijn café?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PubTrivia draait drie maanden gratis tijdens de pilot. Daarna betaal je een vaste maandprijs, vergelijkbaar met een streamingdienst — geen extra fee op je omzet, geen verplichtingen. De prijs wordt tijdens de pilotnabespreking afgesproken."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welke pubquiz software werkt in Nederland?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PubTrivia is specifiek voor de Nederlandse horeca gemaakt: in het Nederlands, met Nederlandse vragen, gericht op cafés, kroegen en eetcafés. Internationale buzzer-systemen passen meestal slecht bij de NL-markt. PubTrivia draait 24/7 zonder quizmaster."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Werkt PubTrivia op een Smart-TV zonder Chromecast?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Elk apparaat met een browser werkt: Smart-TV, Chromecast, Apple TV, Fire TV, of een mini-PC achter de TV. Open onze link in de browser en de quiz draait. Geen app, geen aparte hardware."
+            }
           }
         ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://pub-trivia.nl/#app",
+        "name": "PubTrivia",
+        "alternateName": "PubTrivia digitale pubquiz",
+        "description": "24/7 automatische digitale pubquiz voor cafés en kroegen. Draait op TV, gasten spelen via QR-code op hun telefoon.",
+        "url": "https://app.pub-trivia.nl",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Pub quiz software",
+        "operatingSystem": "Web Browser",
+        "browserRequirements": "Modern browser with JavaScript enabled",
+        "creator": { "@id": "https://pub-trivia.nl/#wonderloop" },
+        "inLanguage": ["nl-NL", "en-GB"],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "name": "Drie maanden gratis pilot",
+          "availability": "https://schema.org/InStock"
+        }
       }
     ]
   }
@@ -257,8 +302,6 @@
     .pt-d .nav-links { display: flex; gap: 32px; font-size: 14px; color: var(--ink-soft); }
     .pt-d .nav-links a:hover { color: var(--ink); }
     .pt-d .nav-cta-row { display: flex; gap: 10px; align-items: center; }
-    .pt-d .nav-login { font-size: 14px; color: var(--ink-soft); padding: 8px 12px; }
-    .pt-d .nav-login:hover { color: var(--ink); }
     .pt-d .lang-switch { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; background: white; transition: border-color 0.15s; }
     .pt-d .lang-switch:hover { border-color: var(--ink-soft); }
     .pt-d .lang-switch img { width: 18px; height: 18px; border-radius: 50%; object-fit: cover; display: block; }
@@ -660,7 +703,6 @@
     @media (max-width: 600px) {
       .pt-d .wrap { padding: 0 18px; }
       .pt-d .nav-inner { padding: 4px 18px; }
-      .pt-d .nav-login { display: none; }
       .pt-d .logo-img { height: 56px; margin: -8px 0; }
       .pt-d .nav-cta-row { gap: 8px; }
       .pt-d .btn { font-size: 13px; padding: 11px 14px; }
@@ -699,6 +741,8 @@
       }
     }
   </style>
+  <!-- Analytics + cookie consent (GA4) -->
+  <script defer src="/assets/analytics.js" data-ga-id="G-PC0DQTYR5B"></script>
 </head>
 <body>
 <div class="pt-root">
@@ -721,8 +765,7 @@
           <img src="assets/flags/gb.png" alt="">
           <span>EN</span>
         </a>
-        <a href="https://app.pub-trivia.nl" class="nav-login">Inloggen</a>
-        <a href="#demo" class="btn btn-primary">
+        <a href="mailto:info@pub-trivia.nl?subject=Demo%20PubTrivia&body=Hoi%20Bas%2C%0A%0AIk%20wil%20graag%20een%20demo%20van%20PubTrivia.%20Mijn%20kroeg%20is%3A%20%5Bnaam%5D%20in%20%5Bplaats%5D.%20Bel%20me%20gerust%20op%20%5Btelefoon%5D." class="btn btn-primary">
           Demo aanvragen
           <span class="btn-arrow">→</span>
         </a>
@@ -745,7 +788,7 @@
             PubTrivia houdt gasten in de zaak met een quiz die 24/7 op je TV draait. Geen quizmaster, geen gedoe — gewoon meer omzet op de uren waar je nu omzet mist.
           </p>
           <div class="hero-cta">
-            <a href="#demo" class="btn btn-primary btn-lg">
+            <a href="mailto:info@pub-trivia.nl?subject=Demo%20PubTrivia&body=Hoi%20Bas%2C%0A%0AIk%20wil%20graag%20een%20demo%20van%20PubTrivia.%20Mijn%20kroeg%20is%3A%20%5Bnaam%5D%20in%20%5Bplaats%5D.%20Bel%20me%20gerust%20op%20%5Btelefoon%5D." class="btn btn-primary btn-lg">
               Vraag een demo aan
               <span class="btn-arrow">→</span>
             </a>
@@ -783,6 +826,15 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- BLUF / What is PubTrivia (extraction-ready summary for AI search) -->
+  <section style="background:white;padding:48px 0;border-top:1px solid var(--line)">
+    <div class="wrap" style="max-width:820px">
+      <p style="font-size:18px;line-height:1.6;color:var(--ink);text-align:center;margin:0">
+        <strong>PubTrivia is een 24/7 automatische pubquiz</strong> die op de TV van Nederlandse cafés en kroegen draait. Gasten scannen een QR-code en spelen op hun telefoon — geen quizmaster, geen apparatuur, geen training. Eerste 3 maanden gratis voor pilotkroegen.
+      </p>
     </div>
   </section>
 
@@ -945,6 +997,13 @@ Printen en draaien maar!</p>
     </div>
   </section>
 
+  <!-- BAR PHOTO -->
+  <section style="padding:0 0 80px">
+    <div class="wrap">
+      <img src="assets/amsterdam-bar.webp" alt="Amsterdamse kroeg met PubTrivia op de TV — gasten spelen mee" loading="lazy" width="1600" height="905" style="width:100%;height:auto;display:block;border-radius:24px">
+    </div>
+  </section>
+
   <!-- FOUNDER NOTE -->
   <section class="quote-row">
     <div class="wrap">
@@ -989,6 +1048,18 @@ Printen en draaien maar!</p>
           <details class="faq-item">
             <summary>Kan ik het ook alleen op rustige avonden gebruiken?</summary>
             <p>Ja. Je kiest zelf het rooster. Of laat het 24/7 lopen — beide werkt.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Hoeveel kost een digitale pubquiz voor mijn café?</summary>
+            <p>PubTrivia draait drie maanden gratis tijdens de pilot. Daarna betaal je een vaste maandprijs, vergelijkbaar met een streamingdienst — geen extra fee op je omzet, geen verplichtingen.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Welke pubquiz software werkt in Nederland?</summary>
+            <p>PubTrivia is specifiek voor de Nederlandse horeca gemaakt: in het Nederlands, met Nederlandse vragen, gericht op cafés, kroegen en eetcafés. Internationale buzzer-systemen passen meestal slecht bij de NL-markt.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Werkt PubTrivia op een Smart-TV zonder Chromecast?</summary>
+            <p>Ja. Elk apparaat met een browser werkt: Smart-TV, Chromecast, Apple TV, Fire TV, of een mini-PC achter de TV. Open onze link in de browser en de quiz draait. Geen app, geen aparte hardware.</p>
           </details>
         </div>
       </div>
@@ -1037,7 +1108,6 @@ Printen en draaien maar!</p>
           <ul>
             <li><a href="mailto:info@pub-trivia.nl">info@pub-trivia.nl</a></li>
             <li><a href="https://wa.me/31681025396">WhatsApp</a></li>
-            <li><a href="https://app.pub-trivia.nl">Inloggen</a></li>
           </ul>
         </div>
         <div>
