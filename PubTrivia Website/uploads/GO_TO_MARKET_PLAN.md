@@ -7,7 +7,7 @@
 
 ## Context
 
-PubTrivia is a working product with no customers yet. The app runs, the admin panel works, the ad system is built, venue accounts with plan tiers (free/gold/platinum at €0/€49/€99) exist in the database, and a placeholder site is live at pub-trivia.nl. Bas lives in Weesp (5-10 potential venues), has no existing relationships with bar owners, and is starting cold. Costs are near zero (Hetzner VPS + Supabase), so the priority is building proof and network density, not rushing to revenue.
+PubTrivia is a working product with no customers yet. The app runs, the admin panel works, the ad system is built, venue accounts with plan tiers (free/gold/platinum at €0/€49/€149 ex-BTW) exist in the database, and a placeholder site is live at pub-trivia.nl. Bas lives in Weesp (5-10 potential venues), has no existing relationships with bar owners, and is starting cold. Costs are near zero (Hetzner VPS + Supabase), so the priority is building proof and network density, not rushing to revenue.
 
 **Approach:** Proof-first with community amplification. Free pilot → prove it works → use proof to sign more bars → monetize once there's density and data.
 
@@ -134,16 +134,13 @@ Current structure in the app:
 
 | Tier | Price | Concept |
 |------|-------|---------|
-| **Free** | €0/month | Full quiz runs, but PubTrivia controls the ad space between rounds |
-| **Gold** | €49/month | Venue can upload own promos/ads, basic customization |
-| **Platinum** | €99/month | Gold + venue branding on screen, dedicated ad slots they can resell |
+| **Free** | €0/month | Full quiz runs. PubTrivia runs third-party ads between rounds — that revenue stays with PubTrivia. |
+| **Gold** | €49/month | Logo on screen + 2 own promo slots (happy hour, own events). PubTrivia's third-party ads still run on top. |
+| **Platinum** | €149/month | Logo + 5 own promo slots + theming + custom rounds + **no third-party advertiser content on this screen** (PubTrivia's own brand/house content still appears). Venue does NOT resell ad inventory — they pay €149 to keep external advertisers off their screen, not to monetize it. |
 
-**Open question - what differentiates free from paid?** Three models to consider:
-1. **Ad inventory trade-off:** Free venues get full product, you own ad space. Paying venues control their screen. (Simplest, no feature gating)
-2. **Feature-limited:** Free gets stripped features (fewer questions, no leaderboard). Risky - makes your product look bad at non-paying venues.
-3. **Time-limited:** Everyone must eventually pay or lose the service. Risky in a 5-10 venue market - losing 3 venues = losing 30-50% of network.
+**Decision (already shipped in code):** Ad inventory trade-off model. Free venues get the full product, but PubTrivia owns the ad space and the revenue. Paying venues progressively gain *control* over their own screen — Gold adds 2 own promo slots (third-party advertiser content still runs), Platinum adds 5 own promos + theming + custom rounds + suppresses third-party advertiser content on that screen (PubTrivia's own brand/house content still appears). **Venues never resell ad inventory** — that revenue stream stays with PubTrivia regardless of tier.
 
-**Recommendation:** Defer this decision until you have Phase 1-2 data. The before/after cover counts and owner feedback will make the answer obvious.
+Source of truth for tier features: `src/lib/venue-admin/plan-features.ts`. Source of truth for pricing: `src/lib/invoicing/constants.ts`. Treat any prose tier description (including elsewhere in this plan) as stale unless it matches the code.
 
 ### The conversion conversation
 - Visit each venue as their 3-month trial ends
