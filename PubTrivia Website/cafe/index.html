@@ -184,7 +184,7 @@
         radial-gradient(ellipse 40% 40% at 10% 90%, rgba(255,106,31,0.06) 0%, transparent 60%);
     }
     .pt-d .hero-grid {
-      display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
     }
     /* /cafe/ specific: visueel kolom-swap (DOM blijft tekst-eerst voor SEO/screenreader) */
     .pt-d .hero-grid > div:first-child { order: 2; }
@@ -674,11 +674,12 @@
       object-fit: cover;
     }
 
-    /* Hero visual — monster-duo + logo (transparante PNG/WebP) */
+    /* Hero visual — monster-duo + logo (transparante PNG/WebP)
+       Overflowt alleen naar rechts (in de kolom-gap), nooit voorbij .wrap aan de linkerkant. */
     .pt-d .hero-monsters {
-      width: 130%; max-width: 130%;
+      width: 110%; max-width: 110%;
       height: auto; display: block;
-      margin: 0 -15%;
+      margin: 0 -10% 0 0;
       filter: drop-shadow(0 24px 48px rgba(26,23,20,0.18));
     }
 
