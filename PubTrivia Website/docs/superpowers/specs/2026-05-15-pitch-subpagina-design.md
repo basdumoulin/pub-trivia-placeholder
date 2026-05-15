@@ -222,8 +222,11 @@ Inhoud:
 ## Open beslissingen (om later op te lossen)
 
 1. **WhatsApp-prefilled-tekst:** Mag uiteindelijk korter/anders. Eerste versie hierboven is een gok.
-2. **Privacy-link bereikbaarheid:** Footer heeft geen links. Voorstel is om de privacy/voorwaarden via de cookie-banner van `analytics.js` bereikbaar te maken. Te bevestigen.
-3. **EN-variant:** Niet nodig nu, beslissing parkeren tot na eerste resultaten.
+2. **EN-variant:** Niet nodig nu, beslissing parkeren tot na eerste resultaten.
+
+## Genomen beslissingen
+
+- **Privacy bereikbaarheid:** Via de bestaande cookie/analytics-banner van `assets/analytics.js`. Geen footer-link nodig.
 
 ## Acceptatiecriteria
 
