@@ -44,12 +44,12 @@ De homepage (`/`) blijft het brede SEO-en-trust-verhaal in pilotfase-modus ("eer
 
 Volgorde van boven naar beneden. Stijl en typografie zijn identiek aan de homepage (Fat Frank + Inter, paper #f6f1ea, accent #ff6a1f).
 
-### 1. NAV
+### 1. NAV (minimaal — single-purpose landing)
 
-Zelfde NAV als homepage maar zonder de interne anker-links (geen "Hoe het werkt", "Functies", "Resultaten", "FAQ" want die secties bestaan niet op dit pagina). Wel:
-- Logo links (linkt naar homepage `/`)
-- EN/NL switch (wijst naar homepage indien EN; later eventueel `/en/cafe/`)
-- Primaire CTA-knop: "Stuur Bas een appje" (WhatsApp link met prefilled tekst)
+Geen interne anker-links, geen taal-switch, geen link naar homepage. De pagina heeft één doel en de bezoeker heeft alleen de CTA-knoppen als uitgang.
+
+- Logo links — **niet klikbaar** (geen route terug naar `/`)
+- Rechts: alleen de primaire CTA-knop "Stuur Bas een appje" (WhatsApp)
 
 ### 2. Hero
 
@@ -64,10 +64,10 @@ Zelfde NAV als homepage maar zonder de interne anker-links (geen "Hoe het werkt"
 **Primaire CTA:** `[Stuur Bas een appje →]` (WhatsApp)
 **Secundaire CTA:** `[Lees eerst hoe het werkt]` (anker naar sectie "Hoe een bezoek werkt")
 
-**Hero meta-strip (3 vinkjes):**
+**Hero meta-strip (3 vinkjes — eerlijk over wat zij meebrengen):**
 - ✓ Gratis
-- ✓ TV met HDMI
-- ✓ Geen creditcard
+- ✓ Eigen TV + wifi
+- ✓ TV blijft de hele dag aan
 
 **Bas-microblok onder de meta-strip:**
 - Kleine pop-out foto (afgeleid van assets/bas-portrait.webp, ~64px)
@@ -110,7 +110,7 @@ De quiz draait zichzelf. Geen quizmaster, geen vragen voorbereiden, geen scores 
 Tussen rondes laat het scherm jouw aanbieding zien. Borrelhapje 9 euro. Dagaanbeveling. Met jouw logo.
 
 **05 — 24/7 vanzelf, ook als jij vrij bent**
-Aanzetten en vergeten. De TV draait middags, avonds, op de vrije zondag. Gasten die binnenlopen hebben meteen iets te doen.
+Aanzetten en vergeten. De TV draait 's middags, 's avonds, op de vrije zondag. Gasten die binnenlopen hebben meteen iets te doen.
 
 **06 — Werkt in Nederlands én Engels**
 Quizvragen in beide talen. Toeristen scannen de QR-code en spelen mee in hun taal, naast je Nederlandse stamgasten.
@@ -119,7 +119,7 @@ Quizvragen in beide talen. Toeristen scannen de QR-code en spelen mee in hun taa
 
 Eyebrow: `BEZOEK`
 H2: **Hoe een bezoek werkt.**
-Sub: Bas komt bij je langs. Gewoon een halfuurtje om te laten zien wat het is.
+Sub: Ik kom bij je langs. Gewoon een halfuurtje om te laten zien wat het is.
 
 Drie stappen, zelfde `.step-list`-styling als homepage:
 
@@ -129,17 +129,17 @@ Je laat weten wanneer 't past. Een doordeweekse middag of voor opening werkt mee
 **02 — Ik kom langs bij jou in de zaak**
 Ik draai de quiz op mijn laptop, we kijken samen of 't past in jouw kroeg.
 
-**03 — Als je 'm wilt: dezelfde middag opgezet**
+**03 — Als je wilt: dezelfde middag opgezet**
 TV koppelen, QR-codes printen, eerste vraag draaien. Klaar in tien minuten. Wil je 't niet, ook prima. Geen verplichting.
 
 ### 6. Kroeg-foto met caption
 
-Volle-breedte foto (de mockup die Bas aanlevert). Geen border, alleen `border-radius: 24px` zoals op de homepage.
+Volle-breedte foto. Hergebruik `assets/amsterdam-bar.webp` (zelfde foto die op de homepage tussen FAQ en features staat). Geen border, alleen `border-radius: 24px` zoals op de homepage.
 
 **Caption onder de foto:**
 > Zo ziet het eruit op een woensdagavond. De TV doet het werk, jij doet wat je altijd doet.
 
-### 7. FAQ (6 vragen)
+### 7. FAQ (5 vragen)
 
 Eyebrow: `VRAGEN`
 H2: **Vragen die je nu hebt.**
@@ -153,15 +153,12 @@ Tussen de quizrondes draaien er korte advertenties van lokale bedrijven en evene
 De TV laat ook zonder spelers vragen, weetjes en jouw eigen aanbiedingen zien. Vaak begint één tafel, daarna volgt de rest.
 
 **3. Wat heb ik aan apparatuur nodig?**
-Een TV met HDMI-ingang en wifi. Smart-TV, Chromecast, Apple TV, of een goedkope mini-PC achter de TV. Wat je nu hebt werkt waarschijnlijk al.
+Een TV met HDMI-ingang en wifi. Wij leveren een TV stick waarmee het meteen werkt.
 
-**4. Wat als er iets kapot gaat?**
-Stuur me een appje. Ik los het diezelfde dag op. Geen helpdesk in een ver land.
-
-**5. Hoe stop ik als het niks is?**
+**4. Hoe stop ik als het niks is?**
 Eén appje, ik kom 'm ophalen of je trekt de stekker eruit. Geen contract, geen opzegtermijn, geen kosten.
 
-**6. Kan ik 'm alleen op rustige avonden gebruiken?**
+**5. Kan ik 'm alleen op rustige avonden gebruiken?**
 Ja. Zet de TV gewoon uit op de avonden dat je 'm niet wilt. De quiz pakt vanzelf weer op als je 'm weer aanzet.
 
 ### 8. Eindblok CTA (donker)
@@ -172,24 +169,29 @@ Zelfde donkere card-stijl als homepage `.cta`. Twee-koloms layout:
 
 **Rechts:**
 - Pill: `● Voor cafés in Weesp en omgeving`
-- H2: **Klaar om mij binnenkort in je zaak te krijgen?**
-- Sub: Stuur een appje wanneer 't past. Ik kom langs, laat zien wat 't is, en als je 'm wilt zetten we 'm dezelfde middag op.
+- H2: **Klaar om meer omzet te gaan draaien? Nodig me uit!**
+- Sub: Stuur een appje wanneer 't past. Ik kom langs, laat zien wat 't is, en als je wilt zetten we 'm dezelfde middag op.
 - Primaire CTA: `[Stuur Bas een appje →]` (WhatsApp link)
 - Secundaire CTA: `[Mail Bas]` (mailto met prefilled subject/body)
 - Disclaimer eronder, klein: "Geen contract, geen opzegtermijn."
 
 Op mobiel: foto bovenaan, tekst eronder.
 
-### 9. Footer
+### 9. Footer (minimaal — geen links)
 
-Identiek aan homepage footer.
+Eén dunne grijze strook onderaan. **Geen klikbare links**, geen logo-grid, geen product/contact/juridisch-kolommen. Alleen statische tekst, zodat de enige uitgang van de pagina de CTA-knoppen zijn.
+
+Inhoud:
+> © 2026 WonderLoop · KVK 91926440 · Amsterdam-Weesp
+
+**Open punt — juridisch:** AVG vereist dat een privacy-statement bereikbaar is. Voorstel: cookie/analytics banner (zelfde `assets/analytics.js` als homepage) bevat de link naar `/privacy`. Hierdoor zijn er geen footer-links, maar blijft de privacy policy bereikbaar zonder navigatie te bieden naar andere site-pagina's. Te bevestigen voordat we gaan bouwen.
 
 ## Assets
 
 | Asset | Pad | Bron | Status |
 |-------|-----|------|--------|
 | Bas portret pop-out | `assets/bas-portrait.webp` | `/Users/basdumoulin/Opruimen/Bas-Director-Alpha-Circle.webp` | Aan te leveren / kopiëren |
-| Kroeg-mockup foto | `assets/cafe-mockup.webp` | Door Bas aan te leveren | TBD |
+| Kroeg-foto | `assets/amsterdam-bar.webp` | Bestaand (homepage gebruikt 'm al) | OK, hergebruiken |
 | Logo, favicons, monster-duo, qr-sticker | bestaande `assets/` | Bestaand | OK |
 
 ## Technische details
@@ -219,8 +221,8 @@ Identiek aan homepage footer.
 
 ## Open beslissingen (om later op te lossen)
 
-1. **Kroeg-mockup foto:** Bas levert deze nog aan. Tot die tijd kan ik `amsterdam-bar.webp` als placeholder gebruiken.
-2. **WhatsApp-prefilled-tekst:** Mag uiteindelijk korter/anders. Eerste versie hierboven is een gok.
+1. **WhatsApp-prefilled-tekst:** Mag uiteindelijk korter/anders. Eerste versie hierboven is een gok.
+2. **Privacy-link bereikbaarheid:** Footer heeft geen links. Voorstel is om de privacy/voorwaarden via de cookie-banner van `analytics.js` bereikbaar te maken. Te bevestigen.
 3. **EN-variant:** Niet nodig nu, beslissing parkeren tot na eerste resultaten.
 
 ## Acceptatiecriteria
@@ -228,8 +230,11 @@ Identiek aan homepage footer.
 - [ ] `/cafe/index.html` bestaat en is rechtstreeks bereikbaar via URL
 - [ ] Layout responsive: ≤900px tablet, ≤600px mobiel (zelfde breakpoints als homepage)
 - [ ] CTA-knoppen openen WhatsApp en mailclient met prefilled tekst
-- [ ] FAQ-accordions werken (eerste open, rest dicht)
+- [ ] FAQ heeft 5 vragen, accordions werken (eerste open, rest dicht)
 - [ ] Bas-foto verschijnt in hero (klein) en eindblok (groot), beide zonder kader
+- [ ] NAV bevat alleen logo (niet klikbaar) + één CTA-knop; geen interne links, geen taal-switch, geen homepage-link
+- [ ] Footer bevat geen klikbare links — alleen een tekstregel met © en KVK
+- [ ] Privacy is bereikbaar via de bestaande cookie/analytics-banner (niet via een footer-link)
 - [ ] Pagina is bereikbaar via `pub-trivia.nl/cafe/` zonder server-config aanpassingen (statische host)
 - [ ] Sitemap bevat `/cafe/`
 - [ ] Geen verwijzing naar deze pagina in homepage-NAV
