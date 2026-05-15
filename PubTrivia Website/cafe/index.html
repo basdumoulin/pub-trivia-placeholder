@@ -662,13 +662,19 @@
       color: var(--ink-soft);
     }
 
-    /* Hero visual op /cafe/ — bargefoto */
+    /* Hero visual op /cafe/ — bargefoto (niet meer gebruikt, bewaard voor evt. fallback) */
     .pt-d .hero-bar-photo {
       width: 100%; height: auto; display: block;
       border-radius: 20px;
       box-shadow: 0 30px 80px rgba(26,23,20,0.10);
       aspect-ratio: 4/3;
       object-fit: cover;
+    }
+
+    /* Hero visual — monster-duo + logo (transparante PNG/WebP) */
+    .pt-d .hero-monsters {
+      width: 100%; height: auto; display: block;
+      filter: drop-shadow(0 24px 48px rgba(26,23,20,0.18));
     }
 
     /* Responsive aanpassingen voor /cafe/-specifieke blokken */
@@ -741,7 +747,7 @@
         </div>
 
         <div>
-          <img src="../assets/amsterdam-bar.webp" alt="Amsterdamse kroeg met PubTrivia op de TV — gasten spelen mee" class="hero-bar-photo" loading="eager" width="1600" height="1200">
+          <img src="../assets/monster-duo-logo.webp" alt="PubTrivia logo met de twee monster-mascottes" class="hero-monsters" loading="eager" width="1200" height="960">
         </div>
       </div>
     </div>
