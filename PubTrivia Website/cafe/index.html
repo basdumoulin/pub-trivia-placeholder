@@ -184,8 +184,11 @@
         radial-gradient(ellipse 40% 40% at 10% 90%, rgba(255,106,31,0.06) 0%, transparent 60%);
     }
     .pt-d .hero-grid {
-      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: center;
+      display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center;
     }
+    /* /cafe/ specific: visueel kolom-swap (DOM blijft tekst-eerst voor SEO/screenreader) */
+    .pt-d .hero-grid > div:first-child { order: 2; }
+    .pt-d .hero-grid > div:last-child { order: 1; }
     .pt-d .pill {
       display: inline-flex; align-items: center; gap: 8px;
       background: white; border: 1px solid var(--line);
@@ -210,7 +213,7 @@
     .pt-d .hero h1 em { color: var(--accent); }
     .pt-d .hero p.lead {
       font-size: 18px; color: var(--ink-soft);
-      max-width: 480px; margin-bottom: 36px;
+      max-width: 560px; margin-bottom: 36px;
     }
     .pt-d .hero-cta { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
     .pt-d .hero-meta {
